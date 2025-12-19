@@ -1,0 +1,131 @@
+/* ===============================
+   HEADER BASE
+================================ */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Shared logo/title */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  height: clamp(35px, 6vw, 55px);
+}
+
+.header-left h1 {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--accent-color);
+}
+
+/* ===============================
+   DESKTOP HEADER
+================================ */
+.header-desktop {
+  display: block;
+}
+
+.header-top {
+  padding: 14px 20px;
+  border-bottom: none;
+  background: transparent;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 24px;
+
+  background: transparent;
+}
+
+/* Desktop nav */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-menu a {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Underline animation */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+/* ===============================
+   PHONE HEADER
+================================ */
+.header-phone {
+  display: none;
+  padding: 14px 20px;
+
+  border-bottom: none;
+  background: transparent;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* ===============================
+   STATE SWITCH
+================================ */
+@media (max-width: 950px) {
+  .header-desktop {
+    display: none;
+  }
+
+  .header-phone {
+    display: flex;
+  }
+}

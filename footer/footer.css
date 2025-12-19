@@ -1,0 +1,17 @@
+/* ---------- FOOTER ---------- */
+.site-footer {
+  background: var(--accent-color);
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
+}
+
+.site-footer .social-icons a {
+  color: #fff;
+  margin: 0 8px;
+  transition: color 0.3s;
+}
+
+.site-footer .social-icons a:hover {
+  color: var(--primary-color);
+}

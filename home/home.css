@@ -1,0 +1,299 @@
+/* ---------- GLOBAL ---------- */
+:root {
+  --primary-color: #99d8a3;
+  --accent-color: #57a0ce;
+  --text-dark: #333;
+  --text-light: #fff;
+  --bg-light: #fafafa;
+  --bg-dark: #222;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section {
+  padding: 80px 20px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  min-height: 100vh; /* Full screen hero */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-image: url('../assets/images/hero_image.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: clamp(60px, 10vw, 120px) 20px;
+  padding-top: clamp(120px, 15vw, 180px);
+  color: #fff;
+}
+
+/* Dark overlay for contrast */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.55)
+  );
+  z-index: 1;
+}
+
+/* Content container */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: clamp(24px, 5vw, 48px);
+
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 16px;
+}
+
+/* Subtitle */
+.hero h2 {
+  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  opacity: 0.9;
+  color: var(--text-light);
+}
+
+/* Main Title */
+.hero h1 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* Slogan */
+.hero p {
+  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* Extra safety for very small screens */
+@media (max-width: 400px) {
+  .hero-content {
+    padding: 20px;
+  }
+}
+
+/* ---------- ABOUT PREVIEW ---------- */
+.about-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1 1 60%;
+}
+
+.about-text h2 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.about-image img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--accent-color);
+}
+
+/* ---------- RACES ---------- */
+.races h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--accent-color);
+}
+
+.race-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.race-images img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  background: #ddd;
+}
+
+/* ---------- FEATURE SECTIONS ---------- */
+.feature {
+  color: #fff;
+  text-align: left;
+  padding: 120px 20px;
+  background: #aaa url('') center/cover no-repeat;
+  position: relative;
+}
+
+.feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.feature-content {
+  position: relative;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.feature h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+/* ---------- TEAM OVERVIEW ---------- */
+.team-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.team-left {
+  flex: 1 1 35%;
+}
+
+.team-left h3 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.team-right {
+  flex: 1 1 60%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.team-feature {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.team-feature img {
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+/* ---------- DEVO SECTION ---------- */
+.devo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.devo-left, .devo-right {
+  flex: 1 1 45%;
+}
+
+.devo-right h2 {
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+/* ---------- PARTNERS ---------- */
+.partners h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: var(--accent-color);
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+}
+
+.partners-grid img {
+  width: 100%;
+  height: 80px;
+  object-fit: contain;
+  background: #eee;
+  border-radius: 6px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .nav-menu ul {
+    display: none;
+    flex-direction: column;
+    background: var(--accent-color);
+  }
+
+  .nav-menu ul.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .feature h2 {
+    font-size: 1.5rem;
+  }
+}
