@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Windburn Multi-Sport Academy</title>
   <link rel="stylesheet" href="home.css" />
-  <link rel="stylesheet" href="../header/header.css" />
+  <link rel="stylesheet" href="header/header.css" />
   <link rel="stylesheet" href="../footer/footer.css" />
   <script src="https://kit.fontawesome.com/a2d9d5f8e2.js" crossorigin="anonymous"></script>
 </head>
@@ -31,23 +31,21 @@
       <h2>Windburn Multi-Sport Academy</h2>
       <p>
         Windburn Multi-Sport Academy Inc. develops athletes from their first multi-sport experience all the way up to elite competition.
-        The atmosphere created for the race team is fun, friendly, and of course competitive. This format brings together athletes of all
-        ages that are focused to succeed and support each other.
+        The atmosphere created for the race team is fun, friendly, and of course, competitive. This format brings together athletes of all
+        ages that are focused to succeed and support each other. Windburn Multi-Sport Academy has two training groups “Windburn Race Team” 
+        and “Windburn DEVO Team”.
       </p>
       <p>
-        Windburn Multi-Sport Academy has two training groups “Windburn Race Team” and “Windburn DEVO Team”. Windburn’s training focuses
-        on the fundamental sports of swim, bike, run, and branches out into the variations of each.
-      </p>
-      <p>
-        Cross training is a staple with the Windburn Multi-Sport Academy, and you will find yourself mixing in cross country skiing /
-        mountain biking, and trail running to name a few keeping your body and mind fresh during the training sessions. Athletes focusing
+        Windburn’s training focuses on the fundamental sports of swim, bike, run, and branches out into the variations of each. 
+        Cross training is a staple with the Windburn Multi-Sport Academy, and you will find yourself mixing in cross country skiing,
+        mountain biking, and trail running to keep your body and mind fresh during the training sessions. Athletes focusing
         on other sports (e.g., hockey, volleyball, basketball, water polo) also benefit from cross training in this environment.
         Benefits include but are not limited to improved endurance, muscle balance and injury prevention.
       </p>
       <a href="#" class="btn">Learn More About Us</a>
     </div>
     <div class="about-image">
-      <img src="assets/images/logo.png" alt="Windburn Logo">
+      <img src="../assets/images/logo.png" alt="Windburn Logo">
     </div>
   </section>
 
@@ -161,7 +159,7 @@
 
   <!-- HEADER & FOOTER LOADER -->
   <script>
-    fetch("../header/header.html")
+    fetch("header/header.html")
       .then(res => res.text())
       .then(data => document.getElementById("header-placeholder").innerHTML = data);
 

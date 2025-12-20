@@ -1,3 +1,13 @@
+:root {
+  /* Divider extension values */
+  --divider-extend-left: clamp(0px, 0vw, 0px);
+  --divider-extend-right: clamp(12px, 3vw, 48px);
+
+  /* Divider appearance */
+  --divider-height: 1px;
+  --divider-color: rgba(255, 255, 255, 0.67);
+}
+
 /* ===============================
    HEADER BASE
 ================================ */
@@ -12,7 +22,9 @@
   box-shadow: none;
 }
 
-/* Shared logo/title */
+/* ===============================
+   SHARED LOGO / TITLE
+================================ */
 .header-left {
   display: flex;
   align-items: center;
@@ -37,22 +49,59 @@
   display: block;
 }
 
+/* TOP ROW (LOGO / TITLE) */
 .header-top {
   padding: 14px 20px;
-  border-bottom: none;
   background: transparent;
 }
 
+/* BOTTOM ROW (NAV + SOCIALS) */
 .header-bottom {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
 
+  padding: 18px 24px 12px;
   background: transparent;
 }
 
-/* Desktop nav */
+/* ===== RESPONSIVE DIVIDER ABOVE LINKS ===== */
+.header-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+
+  height: 1px;
+  width: fit-content;
+  max-width: 100%;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Match divider width to nav */
+.nav-menu {
+  position: relative;
+}
+
+.nav-menu::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+
+  left: calc(-1 * var(--divider-extend-left));
+  width: calc(
+    100% + var(--divider-extend-left) + var(--divider-extend-right)
+  );
+
+  height: var(--divider-height);
+  background: var(--divider-color);
+}
+
+/* ===============================
+   DESKTOP NAV
+================================ */
 .nav-menu ul {
   list-style: none;
   display: flex;
@@ -71,8 +120,10 @@
   position: absolute;
   left: 0;
   bottom: -6px;
+
   width: 0;
   height: 2px;
+
   background: #fff;
   transition: width 0.3s ease;
 }
@@ -82,7 +133,9 @@
   width: 100%;
 }
 
-/* Social icons */
+/* ===============================
+   SOCIAL ICONS
+================================ */
 .social-icons {
   display: flex;
   gap: 14px;
@@ -100,7 +153,6 @@
   display: none;
   padding: 14px 20px;
 
-  border-bottom: none;
   background: transparent;
 
   align-items: center;
