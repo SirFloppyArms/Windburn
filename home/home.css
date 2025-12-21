@@ -508,24 +508,57 @@ a {
 }
 
 /* ---------- PARTNERS ---------- */
+
+.partners {
+  padding: 60px 20px;
+}
+
+.partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px;
+  border-radius: 8px;
+
+  background: #f4f4f4;
+}
+
 .partners h2 {
   text-align: center;
   margin-bottom: 40px;
   color: var(--accent-color);
+  font-weight: 700;
 }
 
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
+  gap: 24px;
+  align-items: center;
+}
+
+.partners-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px;
+  border-radius: 8px;
+
+  background: #f4f4f4;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.partners-grid a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 }
 
 .partners-grid img {
-  width: 100%;
-  height: 80px;
+  max-width: 100%;
+  max-height: 80px;
   object-fit: contain;
-  background: #eee;
-  border-radius: 6px;
 }
 
 /* ---------- RESPONSIVE ---------- */
