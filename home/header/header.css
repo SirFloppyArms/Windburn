@@ -6,6 +6,9 @@
   /* Divider appearance */
   --divider-height: 1px;
   --divider-color: rgba(255, 255, 255, 0.67);
+
+  /* Sticky divider offset */
+  --sticky-divider-offset: 0px;
 }
 
 /* ===============================
@@ -78,6 +81,33 @@
   max-width: 100%;
 
   background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===============================
+   STICKY HEADER-BOTTOM (DESKTOP)
+================================ */
+@media (min-width: 951px) {
+  .header-bottom {
+    transition:
+      background-color 0.3s ease,
+      backdrop-filter 0.3s ease,
+      -webkit-backdrop-filter 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .header-bottom.is-sticky {
+    position: fixed;
+    top: calc(-1 * var(--sticky-divider-offset, 0px));
+    left: 0;
+    width: 100%;
+
+    background: rgba(10, 10, 10, 0.88); /* dark, strong glass */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+    z-index: 999;
+  }
 }
 
 /* Match divider width to nav */
