@@ -1,49 +1,95 @@
 function initStickyHeader() {
   if (window.innerWidth <= 950) return;
 
-  const headerBottom = document.querySelector(".header-bottom");
-  if (!headerBottom) return;
+  const header = document.querySelector(".header-bottom");
+  if (!header) return;
 
-  // Spacer to prevent layout jump
+  /* ===============================
+     Spacer
+  ================================ */
   const spacer = document.createElement("div");
   spacer.style.height = "0px";
   spacer.style.display = "none";
-  headerBottom.after(spacer);
+  spacer.setAttribute("aria-hidden", "true");
+  header.after(spacer);
 
-  const DIVIDER_OFFSET = 18; // nav-menu::before top offset
+  /* ===============================
+     Config
+  ================================ */
+  const STICKY_DELAY = 20;   // px after stick before glass
+  const SCROLL_RANGE = 100; // px to full effect
+
   let stickyTrigger = 0;
+  let resizeTimeout = null;
 
-  function calculateTrigger() {
-    const rect = headerBottom.getBoundingClientRect();
+  /* ===============================
+     Measurements
+  ================================ */
+  function calculateStickyTrigger() {
+    // Force header into natural flow for measurement
+    header.classList.remove("is-sticky");
+    spacer.style.display = "none";
+    spacer.style.height = "0px";
 
-    // Divider is at top of header-bottom
-    const dividerOffset = 0;
-
-    stickyTrigger = window.scrollY + rect.top + dividerOffset;
-
-    // Tell CSS how far to offset the fixed header
-    headerBottom.style.setProperty(
-      "--sticky-divider-offset",
-      `${dividerOffset}px`
-    );
+    const rect = header.getBoundingClientRect();
+    stickyTrigger = window.scrollY + rect.top;
   }
 
-  calculateTrigger();
-  window.addEventListener("resize", calculateTrigger);
+  /* ===============================
+     Update loop
+  ================================ */
+  function update() {
+    const scrollY = window.scrollY;
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY >= stickyTrigger) {
-      if (!headerBottom.classList.contains("is-sticky")) {
-        spacer.style.height = `${headerBottom.offsetHeight}px`;
+    if (scrollY >= stickyTrigger) {
+      if (!header.classList.contains("is-sticky")) {
+        spacer.style.height = `${header.offsetHeight}px`;
         spacer.style.display = "block";
-        headerBottom.classList.add("is-sticky");
+        header.classList.add("is-sticky");
       }
+
+      const distance = scrollY - stickyTrigger;
+
+      if (distance <= STICKY_DELAY) {
+        header.style.setProperty("--sticky-progress", "0");
+        return;
+      }
+
+      const progress = Math.min(
+        (distance - STICKY_DELAY) / SCROLL_RANGE,
+        1
+      );
+
+      header.style.setProperty(
+        "--sticky-progress",
+        progress.toFixed(3)
+      );
     } else {
-      if (headerBottom.classList.contains("is-sticky")) {
-        spacer.style.height = "0px";
-        spacer.style.display = "none";
-        headerBottom.classList.remove("is-sticky");
-      }
+      header.classList.remove("is-sticky");
+      spacer.style.display = "none";
+      spacer.style.height = "0px";
+      header.style.setProperty("--sticky-progress", "0");
     }
-  });
+  }
+
+  /* ===============================
+     Resize handler (debounced)
+  ================================ */
+  function onResize() {
+    clearTimeout(resizeTimeout);
+
+    resizeTimeout = setTimeout(() => {
+      calculateStickyTrigger();
+      update();
+    }, 150);
+  }
+
+  /* ===============================
+     Init
+  ================================ */
+  calculateStickyTrigger();
+  update();
+
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", onResize);
 }

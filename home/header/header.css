@@ -88,25 +88,47 @@
 ================================ */
 @media (min-width: 951px) {
   .header-bottom {
-    transition:
-      background-color 0.3s ease,
-      backdrop-filter 0.3s ease,
-      -webkit-backdrop-filter 0.3s ease,
-      box-shadow 0.3s ease;
+    transition: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
   }
 
   .header-bottom.is-sticky {
     position: fixed;
-    top: calc(-1 * var(--sticky-divider-offset, 0px));
+    top: 0;
     left: 0;
     width: 100%;
-
-    background: rgba(10, 10, 10, 0.88); /* dark, strong glass */
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
     z-index: 999;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(6, 6, 6, calc(0.55 * var(--sticky-progress))),
+        rgba(6, 6, 6, calc(0.75 * var(--sticky-progress)))
+      ),
+      radial-gradient(
+        140% 160% at 0% 0%,
+        color-mix(
+          in srgb,
+          var(--accent-color)
+            calc(30% * var(--sticky-progress)),
+          transparent
+        ),
+        transparent 65%
+      );
+
+    backdrop-filter:
+      blur(calc(14px * var(--sticky-progress)))
+      saturate(calc(110% + 30% * var(--sticky-progress)));
+    -webkit-backdrop-filter:
+      blur(calc(14px * var(--sticky-progress)))
+      saturate(calc(110% + 30% * var(--sticky-progress)));
+
+    box-shadow:
+      0 12px calc(34px * var(--sticky-progress))
+      rgba(0, 0, 0, calc(0.40 * var(--sticky-progress)));
   }
 }
 
