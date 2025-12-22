@@ -97,31 +97,28 @@ function initStickyHeader() {
 function initPhoneMenu() {
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".phone-menu");
+  const header = document.querySelector(".site-header");
 
-  if (!toggle || !menu) return;
+  if (!toggle || !menu || !header) return;
 
   toggle.addEventListener("click", () => {
     const isOpen = menu.classList.toggle("is-open");
 
+    header.classList.toggle("is-menu-open", isOpen);
+
     toggle.setAttribute("aria-expanded", isOpen);
     menu.setAttribute("aria-hidden", !isOpen);
 
-    // Swap icon
     toggle.textContent = isOpen ? "✕" : "☰";
   });
 
-  // Close menu when resizing to desktop
   window.addEventListener("resize", () => {
     if (window.innerWidth > 950) {
       menu.classList.remove("is-open");
+      header.classList.remove("is-menu-open");
       toggle.setAttribute("aria-expanded", "false");
       menu.setAttribute("aria-hidden", "true");
       toggle.textContent = "☰";
     }
   });
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  initStickyHeader();
-  initPhoneMenu();
-});
