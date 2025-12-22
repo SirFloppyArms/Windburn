@@ -53,7 +53,7 @@ a {
   justify-content: center;
   text-align: center;
 
-  background-image: url('../assets/images/hero_image.jpg');
+  background-image: url('assets/images/hero_image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -275,15 +275,15 @@ a {
 
 /* Background image for Feature 1 */
 .feature1 {
-  background-image: url("../assets/images/feature1.jpg");
+  background-image: url("assets/images/feature1.jpg");
 }
 
 .feature2 {
-  background-image: url("../assets/images/feature2.jpg");
+  background-image: url("assets/images/feature2.jpg");
 }
 
 .feature3 {
-  background-image: url("../assets/images/feature3.jpg");
+  background-image: url("assets/images/feature3.jpg");
 }
 
 /* Dark overlay for readability */
