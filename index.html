@@ -265,8 +265,9 @@
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
 
-        // ✅ Initialize sticky behavior AFTER header exists
+        // ✅ Initialize AFTER header exists
         initStickyHeader();
+        initPhoneMenu();
       });
 
     fetch("../footer/footer.html")

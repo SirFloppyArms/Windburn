@@ -563,20 +563,6 @@ a {
 
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 768px) {
-  .nav-menu ul {
-    display: none;
-    flex-direction: column;
-    background: var(--accent-color);
-  }
-
-  .nav-menu ul.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
   .feature h2 {
     font-size: 1.5rem;
   }
