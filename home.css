@@ -46,8 +46,8 @@ a {
 ================================ */
 .hero {
   position: relative;
-  min-height: 100vh; /* Full screen hero */
-  position: relative;
+  min-height: 100vh;
+  min-height: 100svh; /* Better mobile behavior */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -58,18 +58,18 @@ a {
   background-position: center;
   background-repeat: no-repeat;
 
-  padding: clamp(60px, 10vw, 120px) 20px;
-  padding-top: clamp(120px, 15vw, 180px);
+  padding: clamp(48px, 8vw, 120px) 16px;
+  padding-top: clamp(96px, 14vw, 180px);
   color: #fff;
 }
 
-/* Dark overlay for contrast */
+/* Dark overlay */
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.60),
-    rgba(0, 0, 0, 0.20)
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.25)
   );
   z-index: 1;
 }
@@ -79,47 +79,74 @@ a {
   position: relative;
   z-index: 2;
   max-width: 900px;
-  padding: clamp(24px, 5vw, 48px);
+  width: 100%;
 
-  backdrop-filter: blur(1px);
+  padding: clamp(20px, 4vw, 48px);
+  border-radius: 18px;
+
   background: linear-gradient(
-    rgba(0, 0, 0, 0.40),
-    rgba(0, 0, 0, 0.25)
+    rgba(0, 0, 0, 0.38),
+    rgba(0, 0, 0, 0.22)
   );
-  border-radius: 16px;
+  backdrop-filter: blur(1px);
 }
 
 /* Subtitle */
 .hero h2 {
-  font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+  font-size: clamp(0.75rem, 2.2vw, 1.25rem);
   font-weight: 500;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 0.75rem;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  margin-bottom: 0.6rem;
   opacity: 0.9;
   color: var(--text-light);
 }
 
 /* Main Title */
 .hero h1 {
-  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-size: clamp(2rem, 6vw, 4rem);
   font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1rem;
+  line-height: 1.05;
+  margin-bottom: 0.75rem;
   color: var(--primary-color);
 }
 
 /* Slogan */
 .hero p {
-  font-size: clamp(1rem, 3vw, 1.4rem);
+  font-size: clamp(0.95rem, 2.8vw, 1.4rem);
   font-weight: 400;
   opacity: 0.95;
+  max-width: 42ch;
+  margin-inline: auto;
+}
+
+/* ===============================
+   MOBILE TUNING
+================================ */
+@media (max-width: 600px) {
+  .hero {
+    background-position: 60% center;
+  }
+
+  .hero-content {
+    border-radius: 14px;
+    backdrop-filter: blur(0.5px);
+  }
 }
 
 /* Extra safety for very small screens */
 @media (max-width: 400px) {
+  .hero {
+    padding-top: 88px;
+  }
+
   .hero-content {
-    padding: 20px;
+    padding: 18px;
   }
 }
 

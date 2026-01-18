@@ -32,27 +32,27 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
 }
 
 .logo {
   height: clamp(35px, 6vw, 55px);
 }
 
-.header-left h1 {
-  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--accent-color);
-  white-space: nowrap;
-  margin: 0;
-}
-
+.header-left h1,
 .header-title {
-  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-size: clamp(0.95rem, 2.5vw, 1.6rem);
   font-weight: 700;
   line-height: 1.2;
   color: var(--accent-color);
+
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  flex-shrink: 1;
+  min-width: 0;
+  margin: 0;
 }
 
 /* ===============================
@@ -384,20 +384,40 @@
 /* ===============================
    EXTRA SMALL PHONES (COMPACT)
 ================================ */
-@media (max-width: 400px) {
+@media (max-width: 450px) {
   .header-phone {
+    position: relative;
     padding: 12px 16px;
   }
 
-  .header-phone .header-title {
-    display: none;
+  /* Keep logo on the left */
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  /* TRUE centered title */
+  .header-title,
+  .header-left h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 120px); /* prevents overlap */
+    text-align: center;
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
+
+  /* Menu stays right */
+  .menu-toggle {
+    margin-left: auto;
+    font-size: 1.7rem;
   }
 
   .logo {
     height: 36px;
-  }
-
-  .menu-toggle {
-    font-size: 1.7rem;
+    flex-shrink: 0;
   }
 }
+  
