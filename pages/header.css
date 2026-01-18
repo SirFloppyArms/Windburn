@@ -1,0 +1,423 @@
+:root {
+  /* Divider extension values */
+  --divider-extend-left: clamp(0px, 0vw, 0px);
+  --divider-extend-right: clamp(12px, 3vw, 48px);
+
+  /* Divider appearance */
+  --divider-height: 1px;
+  --divider-color: rgba(255, 255, 255, 0.67);
+
+  /* Sticky divider offset */
+  --sticky-divider-offset: 0px;
+}
+
+/* ===============================
+   HEADER BASE
+================================ */
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+
+  background: transparent;
+  box-shadow: none;
+}
+
+/* ===============================
+   SHARED LOGO / TITLE
+================================ */
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.logo {
+  height: clamp(35px, 6vw, 55px);
+}
+
+.header-left h1,
+.header-title {
+  font-size: clamp(0.95rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--accent-color);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  flex-shrink: 1;
+  min-width: 0;
+  margin: 0;
+}
+
+/* ===============================
+   DESKTOP HEADER
+================================ */
+.header-desktop {
+  display: block;
+}
+
+/* TOP ROW (LOGO / TITLE) */
+.header-top {
+  padding: 14px 20px;
+  background: transparent;
+}
+
+/* BOTTOM ROW (NAV + SOCIALS) */
+.header-bottom {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 18px 24px 12px;
+  background: transparent;
+}
+
+/* ===== RESPONSIVE DIVIDER ABOVE LINKS ===== */
+.header-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+
+  height: 1px;
+  width: fit-content;
+  max-width: 100%;
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* ===============================
+   STICKY HEADER-BOTTOM (DESKTOP)
+================================ */
+@media (min-width: 951px) {
+  .header-bottom {
+    transition: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .header-bottom.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(6, 6, 6, calc(0.55 * var(--sticky-progress))),
+        rgba(6, 6, 6, calc(0.75 * var(--sticky-progress)))
+      ),
+      radial-gradient(
+        140% 160% at 0% 0%,
+        color-mix(
+          in srgb,
+          var(--accent-color)
+            calc(30% * var(--sticky-progress)),
+          transparent
+        ),
+        transparent 65%
+      );
+
+    backdrop-filter:
+      blur(calc(14px * var(--sticky-progress)))
+      saturate(calc(110% + 30% * var(--sticky-progress)));
+    -webkit-backdrop-filter:
+      blur(calc(14px * var(--sticky-progress)))
+      saturate(calc(110% + 30% * var(--sticky-progress)));
+
+    box-shadow:
+      0 12px calc(34px * var(--sticky-progress))
+      rgba(0, 0, 0, calc(0.40 * var(--sticky-progress)));
+  }
+}
+
+/* Match divider width to nav */
+.nav-menu {
+  position: relative;
+}
+
+.nav-menu::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+
+  left: calc(-1 * var(--divider-extend-left));
+  width: calc(
+    100% + var(--divider-extend-left) + var(--divider-extend-right)
+  );
+
+  height: var(--divider-height);
+  background: var(--divider-color);
+}
+
+/* ===============================
+   DESKTOP NAV
+================================ */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.nav-menu a {
+  color: #fff;
+  font-weight: 600;
+  position: relative;
+}
+
+/* Underline animation */
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 0;
+  height: 2px;
+
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after,
+.nav-menu a.active::after {
+  width: 100%;
+}
+
+/* ===============================
+   SOCIAL ICONS
+================================ */
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.25rem;
+}
+
+/* ===============================
+   PHONE HEADER (GLASS-READY)
+================================ */
+.header-phone {
+  display: none;
+  padding: 14px 20px;
+
+  position: relative;
+  z-index: 11;
+
+  /* Default = invisible */
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  box-shadow: none;
+
+  transition:
+    background 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    backdrop-filter 0.45s ease,
+    box-shadow 0.45s ease;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.8rem;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* ===============================
+   PHONE HEADER — MENU OPEN STATE
+================================ */
+.site-header.is-menu-open .header-phone {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(6, 6, 6, 0.58),
+      rgba(6, 6, 6, 0.82)
+    ),
+    radial-gradient(
+      140% 160% at 0% 0%,
+      color-mix(
+        in srgb,
+        var(--accent-color) 28%,
+        transparent
+      ),
+      transparent 65%
+    );
+
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+
+  box-shadow:
+    0 6px 18px rgba(0, 0, 0, 0.35);
+}
+
+/* ===============================
+   PHONE MENU — HEADER CONTINUATION
+================================ */
+.phone-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(6, 6, 6, 0.58),
+      rgba(6, 6, 6, 0.82)
+    ),
+    radial-gradient(
+      140% 160% at 0% 0%,
+      color-mix(
+        in srgb,
+        var(--accent-color) 28%,
+        transparent
+      ),
+      transparent 65%
+    );
+
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+
+  /* Continuation depth */
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.42);
+
+  /* Seam join */
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+  transform: translateY(-8px);
+  opacity: 0;
+  pointer-events: none;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease;
+
+  z-index: 10;
+}
+
+/* OPEN STATE */
+.phone-menu.is-open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ===============================
+   PHONE NAV CONTENT
+================================ */
+.phone-nav {
+  padding: 24px 20px 28px;
+}
+
+.phone-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.phone-nav a {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ===============================
+   PHONE SOCIALS
+================================ */
+.phone-socials {
+  margin-top: 26px;
+  display: flex;
+  gap: 18px;
+}
+
+.phone-socials a {
+  color: #fff;
+  font-size: 1.4rem;
+}
+
+/* ===============================
+   MENU BUTTON
+================================ */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.9rem;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* ===============================
+   STATE SWITCH
+================================ */
+@media (max-width: 950px) {
+  .header-desktop {
+    display: none;
+  }
+
+  .header-phone {
+    display: flex;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL PHONES (COMPACT)
+================================ */
+@media (max-width: 450px) {
+  .header-phone {
+    position: relative;
+    padding: 12px 16px;
+  }
+
+  /* Keep logo on the left */
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+  }
+
+  /* TRUE centered title */
+  .header-title,
+  .header-left h1 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 120px); /* prevents overlap */
+    text-align: center;
+    font-size: clamp(0.8rem, 4vw, 1rem);
+  }
+
+  /* Menu stays right */
+  .menu-toggle {
+    margin-left: auto;
+    font-size: 1.7rem;
+  }
+
+  .logo {
+    height: 36px;
+    flex-shrink: 0;
+  }
+}
+  
