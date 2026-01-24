@@ -110,6 +110,13 @@ function initPhoneMenu() {
     menu.setAttribute("aria-hidden", !isOpen);
 
     toggle.textContent = isOpen ? "✕" : "☰";
+
+    /* Prevent body scroll when menu is open */
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
   });
 
   window.addEventListener("resize", () => {
@@ -119,6 +126,9 @@ function initPhoneMenu() {
       toggle.setAttribute("aria-expanded", "false");
       menu.setAttribute("aria-hidden", "true");
       toggle.textContent = "☰";
+
+      /* Restore body scroll on resize to desktop */
+      document.body.style.overflow = "";
     }
   });
 }

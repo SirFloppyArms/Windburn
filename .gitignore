@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node (if using any node-based tools)
+node_modules/
+package-lock.json
+
+# Dependencies
+dist/
+build/
+
+# Environment
+.env
+.env.local

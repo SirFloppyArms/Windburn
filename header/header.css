@@ -32,27 +32,27 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  min-width: 0;
 }
 
 .logo {
   height: clamp(35px, 6vw, 55px);
 }
 
-.header-left h1,
-.header-title {
-  font-size: clamp(0.95rem, 2.5vw, 1.6rem);
+.header-left h1 {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
   font-weight: 700;
   line-height: 1.2;
   color: var(--accent-color);
-
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  flex-shrink: 1;
-  min-width: 0;
   margin: 0;
+}
+
+.header-title {
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--accent-color);
+  white-space: nowrap;
 }
 
 /* ===============================
@@ -278,6 +278,9 @@
   top: 100%;
   left: 0;
   width: 100%;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
 
   background:
     linear-gradient(
@@ -305,15 +308,14 @@
   /* Seam join */
   border-top: 1px solid rgba(255, 255, 255, 0.10);
 
-  transform: translateY(-8px);
+  transform: translateY(0);
   opacity: 0;
   pointer-events: none;
 
   transition:
-    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
     opacity 0.35s ease;
 
-  z-index: 10;
+  z-index: 999;
 }
 
 /* OPEN STATE */
@@ -327,7 +329,7 @@
    PHONE NAV CONTENT
 ================================ */
 .phone-nav {
-  padding: 24px 20px 28px;
+  padding: 24px 20px 32px;
 }
 
 .phone-nav ul {
@@ -348,6 +350,7 @@
 ================================ */
 .phone-socials {
   margin-top: 26px;
+  padding-bottom: 12px;
   display: flex;
   gap: 18px;
 }
@@ -384,40 +387,20 @@
 /* ===============================
    EXTRA SMALL PHONES (COMPACT)
 ================================ */
-@media (max-width: 450px) {
+@media (max-width: 400px) {
   .header-phone {
-    position: relative;
     padding: 12px 16px;
   }
 
-  /* Keep logo on the left */
-  .header-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    min-width: 0;
-  }
-
-  /* TRUE centered title */
-  .header-title,
-  .header-left h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: calc(100% - 120px); /* prevents overlap */
-    text-align: center;
-    font-size: clamp(0.8rem, 4vw, 1rem);
-  }
-
-  /* Menu stays right */
-  .menu-toggle {
-    margin-left: auto;
-    font-size: 1.7rem;
+  .header-phone .header-title {
+    display: none;
   }
 
   .logo {
     height: 36px;
-    flex-shrink: 0;
+  }
+
+  .menu-toggle {
+    font-size: 1.7rem;
   }
 }
-  

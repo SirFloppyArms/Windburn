@@ -1,0 +1,23 @@
+{
+  "name": "windburn-multi-sport-academy",
+  "version": "1.0.0",
+  "description": "Website for Windburn Multi-Sport Academy - a competitive triathlon training organization",
+  "main": "index.html",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000"
+  },
+  "keywords": [
+    "triathlon",
+    "training",
+    "sports",
+    "academy",
+    "windburn"
+  ],
+  "author": "Windburn Multi-Sport Academy",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/windburn"
+  }
+}
