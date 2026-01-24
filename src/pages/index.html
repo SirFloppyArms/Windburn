@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Windburn Multi-Sport Academy</title>
   <link rel="stylesheet" href="../styles/global.css" />
-  <link rel="stylesheet" href="../components/header/header.css" />
+  <link rel="stylesheet" href="../components/header/index_header.css" />
   <link rel="stylesheet" href="../components/footer/footer.css" />
   <link rel="icon" href="../../public/assets/images/favicon.ico" type="image/x-icon" />
   <script src="https://kit.fontawesome.com/a2d9d5f8e2.js" crossorigin="anonymous"></script>
@@ -269,6 +269,9 @@
         // ✅ Initialize AFTER header exists
         initStickyHeader();
         initPhoneMenu();
+        
+        // ✅ Set active nav link based on current page
+        setActiveNavLink(getCurrentPageName());
       });
 
     fetch("../components/footer/footer.html")

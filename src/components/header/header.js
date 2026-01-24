@@ -132,3 +132,25 @@ function initPhoneMenu() {
     }
   });
 }
+
+/* ===============================
+   Set Active Navigation Link
+================================ */
+function setActiveNavLink(currentPage) {
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    link.classList.remove("active");
+    if (link.getAttribute("data-page") === currentPage) {
+      link.classList.add("active");
+    }
+  });
+}
+
+/* ===============================
+   Get Current Page Name
+================================ */
+function getCurrentPageName() {
+  const path = window.location.pathname;
+  const filename = path.split("/").pop() || "index.html";
+  return filename.replace(".html", "");
+}

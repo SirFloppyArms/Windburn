@@ -1,0 +1,531 @@
+/* ===============================
+   WINDBURN RACE TEAM PAGE STYLES
+================================ */
+
+/* ===============================
+   INTRO SECTION
+================================ */
+.intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-content h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--accent-color);
+  margin-bottom: 24px;
+}
+
+.intro-content p {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+
+.intro-content strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* ===============================
+   TEAM HIGHLIGHTS
+================================ */
+.team-highlights {
+  background: var(--bg-light);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(24px, 4vw, 40px);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.highlight-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: var(--spacing-2xl);
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+
+  transition: 
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.highlight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.highlight-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  font-size: 1.8rem;
+}
+
+.highlight-card h3 {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin: 0;
+}
+
+.highlight-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ===============================
+   TRAINING FOCUS SECTION
+================================ */
+.training-focus {
+  background: rgba(153, 216, 163, 0.05);
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  color: var(--accent-color);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+  font-weight: 800;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.05rem;
+  color: var(--text-dark);
+  opacity: 0.85;
+  margin-bottom: var(--spacing-2xl);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.training-card {
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid var(--primary-color);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.training-card h3 {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.training-card p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* ===============================
+   COMMITMENT SECTION
+================================ */
+.commitment-section {
+  background: var(--bg-light);
+}
+
+.commitment-content {
+  display: grid;
+  grid-template-columns: 1.2fr 300px;
+  gap: clamp(32px, 6vw, 60px);
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.commitment-text h3 {
+  font-size: 1.35rem;
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-lg);
+  margin-top: 0;
+}
+
+.commitment-text p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: var(--spacing-lg);
+}
+
+.benefit-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.benefit-list li {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-left: 24px;
+  position: relative;
+  color: var(--text-dark);
+}
+
+.benefit-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.commitment-card {
+  background: rgba(87, 160, 206, 0.08);
+  border: 1px solid var(--accent-color);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+}
+
+.commitment-card h3 {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-md);
+  margin-top: 0;
+}
+
+.commitment-card p {
+  margin: 0 0 var(--spacing-sm) 0;
+  font-size: 0.95rem;
+}
+
+.commitment-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.9rem;
+}
+
+.commitment-card li {
+  color: var(--text-dark);
+  opacity: 0.85;
+}
+
+.commitment-card li::before {
+  content: "•";
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* ===============================
+   COMPETITION SECTION
+================================ */
+.competition-section {
+  background: rgba(153, 216, 163, 0.05);
+}
+
+.competition-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.competition-item {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(87, 160, 206, 0.3);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.competition-item h3 {
+  color: var(--accent-color);
+  font-size: 1.15rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.competition-item p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ===============================
+   FEATURE SECTION OVERRIDE
+================================ */
+.feature-bg--primary {
+  background-image: url("../../public/assets/images/feature4.jpg");
+}
+
+.feature-subtext {
+  font-size: 1.1rem;
+  opacity: 0.95;
+  margin-top: var(--spacing-md);
+  max-width: 45ch;
+}
+
+/* ===============================
+   REQUIREMENTS SECTION
+================================ */
+.requirements-section {
+  background: var(--bg-light);
+}
+
+.requirements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1000px;
+  margin: 0 auto var(--spacing-3xl);
+}
+
+.requirement-box {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.requirement-box h3 {
+  color: var(--accent-color);
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.requirement-box p {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-dark);
+  opacity: 0.85;
+  margin: 0;
+}
+
+.cta-section {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: rgba(87, 160, 206, 0.06);
+  border: 1px solid var(--accent-color);
+  border-radius: 16px;
+  padding: var(--spacing-2xl);
+}
+
+.cta-section h3 {
+  color: var(--accent-color);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.cta-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 100%;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ===============================
+   BENEFITS SECTION
+================================ */
+.benefits-section {
+  background: rgba(153, 216, 163, 0.05);
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.benefit-item {
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(87, 160, 206, 0.2);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  text-align: center;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.benefit-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-item i {
+  font-size: 2.2rem;
+  color: var(--accent-color);
+}
+
+.benefit-item h3 {
+  color: var(--text-dark);
+  font-size: 1.15rem;
+  margin: 0;
+}
+
+.benefit-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-dark);
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ===============================
+   CTA FINAL SECTION
+================================ */
+.cta-final {
+  background: linear-gradient(
+    135deg,
+    var(--accent-color) 0%,
+    rgba(87, 160, 206, 0.85) 100%
+  );
+  color: var(--text-light);
+  text-align: center;
+  padding: var(--spacing-3xl) var(--spacing-lg);
+}
+
+.cta-final h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.cta-final p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--spacing-xl);
+  opacity: 0.95;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 900px) {
+  .page-header {
+    padding: 100px 20px 60px;
+  }
+
+  .commitment-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .commitment-card {
+    max-width: 100%;
+  }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .training-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competition-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .highlight-card {
+    padding: var(--spacing-lg);
+  }
+
+  .cta-section {
+    margin: 0 var(--spacing-md);
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .page-header p {
+    font-size: 1rem;
+  }
+
+  .requirements-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .page-header {
+    padding: 80px 16px 50px;
+  }
+
+  .intro-content {
+    padding: 0 var(--spacing-md);
+  }
+
+  .cta-final {
+    padding: var(--spacing-2xl) var(--spacing-md);
+  }
+
+  .cta-final h2 {
+    font-size: 1.5rem;
+  }
+
+  .benefit-item,
+  .competition-item,
+  .training-card,
+  .highlight-card {
+    padding: var(--spacing-lg);
+  }
+}
