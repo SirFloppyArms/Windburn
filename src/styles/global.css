@@ -564,6 +564,18 @@ a {
   background-image: url("../../public/assets/images/feature3.jpg");
 }
 
+.feature-bg--quaternary {
+  background-image: url("../../public/assets/images/feature4.jpg");
+}
+
+.feature-bg--quinary {
+  background-image: url("../../public/assets/images/feature5.jpg");
+}
+
+.feature-bg--sextary {
+  background-image: url("../../public/assets/images/feature6.jpg");
+}
+
 /* Legacy support for existing class names */
 .feature1 {
   background-image: url("../../public/assets/images/feature1.jpg");
@@ -575,6 +587,18 @@ a {
 
 .feature3 {
   background-image: url("../../public/assets/images/feature3.jpg");
+}
+
+.feature4 {
+  background-image: url("../../public/assets/images/feature4.jpg");
+}
+
+.feature5 {
+  background-image: url("../../public/assets/images/feature5.jpg");
+}
+
+.feature6 {
+  background-image: url("../../public/assets/images/feature6.jpg");
 }
 
 /* Dark overlay for text readability */
