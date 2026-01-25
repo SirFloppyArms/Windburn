@@ -85,9 +85,38 @@ function initFAQs() {
 }
 
 /* ===============================
+   COURSE MAPS TAB FUNCTIONALITY
+================================ */
+function initCourseMaps() {
+  const tabButtons = document.querySelectorAll('.course-tab-btn');
+  const tabContents = document.querySelectorAll('.course-tab-content');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const selectedTab = this.getAttribute('data-tab');
+
+      // Remove active class from all buttons
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      // Remove active class from all contents
+      tabContents.forEach(content => content.classList.remove('active'));
+
+      // Add active class to clicked button
+      this.classList.add('active');
+
+      // Add active class to corresponding content
+      const activeContent = document.querySelector(`.course-tab-content[data-tab="${selectedTab}"]`);
+      if (activeContent) {
+        activeContent.classList.add('active');
+      }
+    });
+  });
+}
+
+/* ===============================
    PAGE INITIALIZATION
 ================================ */
 document.addEventListener('DOMContentLoaded', function() {
   initCountdown();
   initFAQs();
+  initCourseMaps();
 });

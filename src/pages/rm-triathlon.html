@@ -325,67 +325,167 @@
   </section>
 
     <!-- COURSE MAPS SECTION -->
-  <section class="section course-maps-section">
-    <h2 class="section-title">Course Maps & Resources</h2>
-    <p class="section-subtitle">Explore each distance and learn the course before race day</p>
-    <div class="course-grid">
-      
-      <div class="course-card">
-        <div class="course-icon"><i class="fas fa-map"></i></div>
-        <h3>Sprint Swim Map</h3>
-        <p>750m open water swim course in Clear Lake. Marked with buoys and lifeguards on patrol for your safety.</p>
-        <a href="#" class="course-link">View Map →</a>
-      </div>
+  <section class="section">
+    <div class="course-maps-section">
+      <h2 class="section-title">Course Maps & Resources</h2>
+      <p class="section-subtitle">Explore each distance and learn the course before race day</p>
 
-      <div class="course-card">
-        <div class="course-icon"><i class="fas fa-map"></i></div>
-        <h3>Olympic Swim Map</h3>
-        <p>1.5km scenic open water swim with two loops. Challenging but well-supported with boat coverage.</p>
-        <a href="#" class="course-link">View Map →</a>
-      </div>
+      <!-- COURSE MAPS CONTAINER -->
+      <div class="course-maps-container">
+        <!-- TAB NAVIGATION -->
+        <div class="course-tabs-nav">
+          <button class="course-tab-btn active" data-tab="swim">Swim</button>
+          <button class="course-tab-btn" data-tab="bike">Bike</button>
+          <button class="course-tab-btn" data-tab="bike-profile">Bike Profile</button>
+          <button class="course-tab-btn" data-tab="run">Run</button>
+          <button class="course-tab-btn" data-tab="run-super">Duathlon Run</button>
+          <button class="course-tab-btn" data-tab="transition">Transition</button>
+          <button class="course-tab-btn" data-tab="parking">Parking</button>
+        </div>
 
-      <div class="course-card">
-        <div class="course-icon"><i class="fas fa-map"></i></div>
-        <h3>Half-Ironman Swim Map</h3>
-        <p>1.9km swim with support boats and a dedicated swimmer safety team. Completely marked route.</p>
-        <a href="#" class="course-link">View Map →</a>
-      </div>
+        <!-- TAB CONTENT -->
+        <div class="course-maps-content">
 
-      <div class="course-card">
-        <div class="course-icon"><i class="fas fa-map"></i></div>
-        <h3>Sprint Bike Route</h3>
-        <p>20km paved road course with moderate rolling hills. Well-marked turns and aid stations at km 10.</p>
-        <a href="#" class="course-link">View Map →</a>
-      </div>
+          <!-- SWIM TAB -->
+          <div class="course-tab-content active" data-tab="swim">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Swim</h3>
+                <p>The swim starts at the designated dock area on the north end of Clear Lake within Riding Mountain National Park. All athletes enter the water together and follow a clearly marked counterclockwise route around the designated swim zone.</p>
+                <p>The course is monitored continuously by lifeguards, safety boats, and volunteer swimmers positioned at strategic intervals. Water conditions are typically calm with mild currents. All swimmers must wear a brightly colored swim cap (provided with race kit) and are encouraged to complete practice swims before race day.</p>
+                <p><strong>Super Sprint Distance:</strong> 400m – Single rectangular loop, approximately 5-7 minute swim</p>
+                <p><strong>Sprint Distance:</strong> 750m – Rectangular loop with one additional circuit, approximately 10-13 minute swim</p>
+                <p><strong>Olympic Distance:</strong> 1.5km – Extended route with two complete loops, approximately 20-25 minute swim</p>
+                <p>Athletes exit the water at the designated swim exit beach and proceed directly to the transition zone via the marked running path.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../../public/assets/images/maps/swim_route.jpg" alt="Swim course map">
+              </div>
+            </div>
+          </div>
 
-      <div class="course-card">
-        <div class="course-icon"><i class="fas fa-map"></i></div>
-        <h3>Olympic Bike Route</h3>
-        <p>40km challenging bike course featuring scenic loops around the national park. Two aid stations on course.</p>
-        <a href="#" class="course-link">View Map →</a>
-      </div>
+          <!-- TRANSITION TAB -->
+          <div class="course-tab-content" data-tab="transition">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Transition</h3>
+                <p>The transition zone is a critical part of the race. Upon exiting the water, athletes run approximately 200m along a marked path to enter the transition area where their bikes and gear are positioned.</p>
+                <p>The transition is organized into clearly marked rows. Your bike number corresponds to specific rack locations. All racking is first-come, first-served (except elite seeding). The transition zone features proper spacing to prevent congestion and confusion during the race.</p>
+                <p>Athletes must exit the transition zone using the designated bike exit road. The path is clearly marked and monitored by volunteers. All bikes must be mounted before leaving the transition area.</p>
+                <p>Upon finishing the run, athletes re-enter the transition zone from a separate entrance, deposit their running gear, and proceed to the finish line area.</p>
+                <p>A detailed transition diagram is provided in your race kit. Familiarize yourself with your assigned rack location during race check-in.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../../public/assets/images/maps/transition.jpg" alt="Transition zone map">
+              </div>
+            </div>
+          </div>
 
-      <div class="course-card">
-        <div class="course-icon"><i class="fas fa-map"></i></div>
-        <h3>Half-Ironman Bike Route</h3>
-        <p>90km advanced bike course with significant elevation gain. Aid stations at km 20, 45, and 70.</p>
-        <a href="#" class="course-link">View Map →</a>
-      </div>
+          <!-- BIKE TAB -->
+          <div class="course-tab-content" data-tab="bike">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Bike</h3>
+                <p>The bike course begins at the transition zone exit and follows a scenic loop through Riding Mountain National Park on well-maintained paved roads. The route is clearly marked with directional signage at all intersections and arrows painted on the road surface.</p>
+                <p>The course features rolling terrain with several moderate climbing sections. Riders should maintain awareness of other competitors and follow all traffic safety rules. The course is fully closed to vehicular traffic during the race period, and volunteer marshals are stationed at major intersections.</p>
+                <p><strong>Super Sprint:</strong> 10km – Flat to rolling terrain, single loop</p>
+                <p><strong>Sprint Distance:</strong> 20km – Moderate rolling hills with scenic views, two sections with climbing</p>
+                <p><strong>Olympic Distance:</strong> 40km – Challenging route with more significant elevation gain and extended mountain views</p>
+                <p>Aid stations are positioned at strategic intervals (approximately every 5-8km). Water, sports drinks, and nutrition are available. Athletes should practice their hydration and fueling strategy before race day.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../../public/assets/images/maps/bike_route.jpg" alt="Bike course map">
+              </div>
+            </div>
+          </div>
 
-      <div class="course-card">
-        <div class="course-icon"><i class="fas fa-map"></i></div>
-        <h3>Sprint Run Route</h3>
-        <p>5km trail run starting from transition. Scenic terrain with one aid station at km 2.5.</p>
-        <a href="#" class="course-link">View Map →</a>
-      </div>
+          <!-- BIKE PROFILE TAB -->
+          <div class="course-tab-content" data-tab="bike-profile">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Bike – Profile</h3>
+                <p>Understanding the elevation profile of the bike course will help you pace your effort and prepare for the climbing sections. The course begins at the transition zone (elevation 630m) and gradually ascends through the first 3km.</p>
+                <p>The most significant elevation gain occurs between km 8-15, where the road climbs steadily toward the park's ridge area. This is typically the toughest section of all bike distances. After km 15, the course descends and rolls through forested sections with variable gradient.</p>
+                <p><strong>Super Sprint Profile:</strong> Minimal elevation change, ideal for beginners and those wanting a confidence-building ride.</p>
+                <p><strong>Sprint Profile:</strong> Approximately 180m total elevation gain with manageable climbs. The final 2km returns to lower elevation with a slight downhill finish.</p>
+                <p><strong>Olympic Profile:</strong> Approximately 450m total elevation gain with extended climbing sections. Two peaks are reached during the course, with corresponding descents providing recovery opportunities.</p>
+                <p>Weather conditions can significantly impact cycling comfort. Wind exposure on higher elevation sections may be noticeable. Check the course preview video and elevation charts in your race kit.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../../public/assets/images/maps/bike_profile.jpg" alt="Bike elevation profile">
+              </div>
+            </div>
+          </div>
 
-      <div class="course-card">
-        <div class="course-icon"><i class="fas fa-map"></i></div>
-        <h3>Race Day Information</h3>
-        <p>Download the complete race guide with course profiles, elevation charts, and detailed transition instructions.</p>
-        <a href="#" class="course-link">Download Guide →</a>
-      </div>
+          <!-- RUN TAB -->
+          <div class="course-tab-content" data-tab="run">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Run</h3>
+                <p>The run course begins immediately after exiting the transition zone and leads athletes on a scenic trail run through Riding Mountain National Park. The terrain combines packed dirt trails and some technical single-track sections with natural obstacles.</p>
+                <p>The route is well-marked with both course markers and volunteer marshals stationed at key junctions. Athletes should be prepared for variable terrain conditions depending on recent weather. Trail conditions are typically well-maintained but can be muddy after rain.</p>
+                <p><strong>Super Sprint Distance:</strong> 2.5km – One loop on main trail, minimal elevation change. Approximately 15-20 minutes for most participants.</p>
+                <p><strong>Sprint Distance:</strong> 5km – Two loops or single extended loop with one climbing section. Approximately 30-45 minutes depending on fitness level.</p>
+                <p><strong>Olympic Distance:</strong> 10km – Two complete loops on the full trail route with multiple climbing sections. Total climbing approximately 80m. Approximately 60-90 minutes.</p>
+                <p>Aid stations are located at the 1km mark and turnaround points. Final 500m features a slight descent to the finish line area where supporters can gather. The finish line festival area includes immediate recovery beverages and food.</p>
+                <p><strong>Pacing Strategy:</strong> Practice your transition pacing before race day. Many athletes find it challenging to settle into running rhythm immediately after the bike. The first 500m of the run is typically slower than your normal running pace due to cycling fatigue (known as "heavy legs").</p>
+                <p>Hydration and fueling during the run become increasingly important for the longer distances (Sprint and Olympic). The mid-course aid stations provide water, sports drinks, and energy gels. Test your nutrition strategy during training. Start conservatively and build effort gradually throughout the race.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../../public/assets/images/maps/run_route.jpg" alt="Run course map">
+              </div>
+            </div>
+          </div>
 
+          <!-- RUN SUPER SPRINT TAB -->
+          <div class="course-tab-content" data-tab="run-super">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Run – Super Sprint & Duathlon</h3>
+                <p>The Super Sprint 2.5km run is an excellent introduction to triathlon. This distance is achievable for first-time athletes while still providing a meaningful running challenge after the swim and bike legs.</p>
+                <p>For duathlon participants (bike-run only), the 2.5km run concludes the race and serves as a final sprint to the finish. This course uses the same trail system as the triathlon distances but represents only a single loop on the primary trail.</p>
+                <p>The terrain is well-marked and relatively forgiving compared to the longer distances. One aid station is positioned at approximately the 1km mark. The final section features a gradual descent toward the finish line celebration area.</p>
+                <p>This distance is perfect for building confidence before attempting longer distances. Focus on maintaining steady effort and enjoying the experience. The scenic finish line provides excellent spectator viewing areas.</p>
+                <p>After finishing, proceed directly to the finish line area where you'll receive a finisher's medal, refreshment beverages, and access to the race festival with food vendors and celebration activities.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../../public/assets/images/maps/duathlon_run_route.jpg" alt="Super Sprint run course">
+              </div>
+            </div>
+          </div>
+
+          <!-- PARKING TAB -->
+          <div class="course-tab-content" data-tab="parking">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Parking</h3>
+                <p>Adequate parking is available at the race venue with designated lots organized by distance and participant type. Athlete parking is located closest to the transition zone and race start area, ensuring convenient access to your bike and gear.</p>
+                <p>Spectator parking is available in separate lots with clear signage. A complimentary shuttle service operates between spectator parking and the main race festival area. Allow extra time for parking on race morning – we recommend arriving at least 90 minutes before your wave start time.</p>
+                <p><strong>Key Parking Information:</strong></p>
+                <ul style="margin: var(--spacing-md) 0; padding-left: 20px;">
+                  <li>Athlete parking opens at 5:30 AM</li>
+                  <li>Vehicle parking is limited – carpooling strongly encouraged</li>
+                  <li>Parking attendants provide direction at main entrances</li>
+                  <li>Lost vehicle hotline available day-of (provided in race kit)</li>
+                  <li>Accessible parking available (contact race director for reserved spot)</li>
+                </ul>
+                <p>After the race, a coordinated exit flow helps manage parking lot congestion. Please be patient and allow extra time to retrieve your vehicle. Thank you for your patience!</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../../public/assets/images/maps/parking.jpg" alt="Parking map">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </div>
   </section>
 

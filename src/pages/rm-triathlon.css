@@ -546,71 +546,242 @@
    COURSE MAPS SECTION
 ================================ */
 .course-maps-section {
-  text-align: center;
+  width: 100%;
 }
 
-.course-grid {
+.course-maps-container {
+  background: linear-gradient(135deg, #f8f9fa 0%, #f0f2f5 100%);
+  border-radius: 24px;
+  padding: var(--spacing-3xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* TAB NAVIGATION */
+.course-tabs-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-3xl);
+  justify-content: center;
+}
+
+.course-tab-btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: none;
+  color: var(--text-dark);
+  font-size: 0.95rem;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+
+  transition: all var(--transition-fast);
+  border-radius: 999px;
+  white-space: nowrap;
+  opacity: 0.7;
+}
+
+.course-tab-btn:hover {
+  opacity: 0.9;
+}
+
+.course-tab-btn.active {
+  background: var(--accent-color);
+  color: var(--text-light);
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(87, 160, 206, 0.3);
+}
+
+/* TAB CONTENT AREA */
+.course-maps-content {
+  position: relative;
+  min-height: 600px;
+}
+
+.course-tab-content {
+  display: none;
+  opacity: 0;
+  transition: opacity var(--transition-normal) ease;
+}
+
+.course-tab-content.active {
+  display: block;
+  opacity: 1;
+}
+
+.course-content-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: clamp(20px, 3vw, 28px);
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(32px, 5vw, 48px);
+  align-items: start;
 }
 
-.course-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: var(--spacing-xl);
-
+/* TEXT COLUMN */
+.course-text-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--spacing-md);
-  text-align: center;
-
-  transition:
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast),
-    border-color var(--transition-fast);
+  gap: var(--spacing-lg);
+  justify-content: flex-start;
 }
 
-.course-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-color);
-}
-
-.course-icon {
-  font-size: 2.5rem;
+.course-text-column h3 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
   color: var(--accent-color);
+  font-weight: var(--font-weight-extrabold);
+  margin: 0;
+  line-height: 1.2;
 }
 
-.course-card h3 {
-  font-size: 1.15rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--text-dark);
-  margin: var(--spacing-sm) 0;
-}
-
-.course-card p {
+.course-text-column p {
   font-size: 0.95rem;
-  opacity: 0.85;
-  line-height: 1.6;
-  margin: 0 0 var(--spacing-md) 0;
+  line-height: 1.75;
+  color: var(--text-dark);
+  opacity: 0.9;
+  margin: 0;
 }
 
-.course-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.course-text-column strong {
   color: var(--accent-color);
-  font-weight: var(--font-weight-semibold);
-  transition: color var(--transition-fast);
-  margin-top: auto;
+  font-weight: var(--font-weight-bold);
 }
 
-.course-link:hover {
-  color: var(--primary-color);
+.course-text-column ul {
+  margin: 0;
+  padding-left: 20px;
+  color: var(--text-dark);
+  opacity: 0.9;
 }
+
+.course-text-column li {
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.6;
+}
+
+/* LARGER MAP BUTTON */
+.course-larger-map-btn {
+  align-self: flex-start;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background: rgba(200, 200, 200, 0.3);
+  border: 2px solid var(--border-light);
+  color: var(--text-dark);
+  font-weight: var(--font-weight-semibold);
+  font-size: 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+
+  transition: all var(--transition-fast);
+  margin-top: var(--spacing-md);
+}
+
+.course-larger-map-btn:hover {
+  background: rgba(87, 160, 206, 0.15);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* IMAGE COLUMN */
+.course-image-column {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: var(--bg-light);
+  display: block;
+  padding: 8px;
+  height: auto;
+  max-width: 520px; /* adjust to taste */
+  width: fit-content;
+}
+
+.course-image-column img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  border-radius: 16px;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 1024px) {
+  .course-maps-container {
+    padding: var(--spacing-2xl);
+  }
+
+  .course-content-wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .course-maps-container {
+    padding: var(--spacing-xl);
+  }
+
+  .course-tabs-nav {
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .course-tab-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.85rem;
+  }
+
+  .course-content-wrapper {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    min-height: auto;
+  }
+
+  .course-text-column h3 {
+    font-size: 1.8rem;
+  }
+
+  .course-text-column p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .course-maps-container {
+    padding: var(--spacing-lg);
+    border-radius: 16px;
+  }
+
+  .course-tabs-nav {
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-xl);
+  }
+
+  .course-tab-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .course-text-column h3 {
+    font-size: 1.4rem;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .course-text-column p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .course-image-column {
+    min-height: 220px;
+  }
+
+  .course-larger-map-btn {
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.75rem;
+  }
+}
+
 
 /* ===============================
    RESPONSIVE DESIGN
