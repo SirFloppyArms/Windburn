@@ -553,52 +553,84 @@ a {
 
 /* Feature background image variants */
 .feature-bg--primary {
-  background-image: url("../../public/assets/images/feature1.jpg");
+  background-image: url("../../public/assets/images/features/feature1.jpg");
 }
 
 .feature-bg--secondary {
-  background-image: url("../../public/assets/images/feature2.jpg");
+  background-image: url("../../public/assets/images/features/feature2.jpg");
 }
 
 .feature-bg--tertiary {
-  background-image: url("../../public/assets/images/feature3.jpg");
+  background-image: url("../../public/assets/images/features/feature3.jpg");
 }
 
 .feature-bg--quaternary {
-  background-image: url("../../public/assets/images/feature4.jpg");
+  background-image: url("../../public/assets/images/features/feature4.jpg");
 }
 
 .feature-bg--quinary {
-  background-image: url("../../public/assets/images/feature5.jpg");
+  background-image: url("../../public/assets/images/features/feature5.jpg");
 }
 
 .feature-bg--sextary {
-  background-image: url("../../public/assets/images/feature6.jpg");
+  background-image: url("../../public/assets/images/features/feature6.jpg");
+}
+
+.feature-bg--septenary {
+  background-image: url("../../public/assets/images/features/feature7.jpg");
+}
+
+.feature-bg--octonary {
+  background-image: url("../../public/assets/images/features/feature8.jpg");
+}
+
+.feature-bg--nonary {
+  background-image: url("../../public/assets/images/features/feature9.jpg");
+}
+
+.feature-bg--denary {
+  background-image: url("../../public/assets/images/features/feature10.jpg");
 }
 
 /* Legacy support for existing class names */
 .feature1 {
-  background-image: url("../../public/assets/images/feature1.jpg");
+  background-image: url("../../public/assets/images/features/feature1.jpg");
 }
 
 .feature2 {
-  background-image: url("../../public/assets/images/feature2.jpg");
+  background-image: url("../../public/assets/images/features/feature2.jpg");
 }
 
 .feature3 {
-  background-image: url("../../public/assets/images/feature3.jpg");
+  background-image: url("../../public/assets/images/features/feature3.jpg");
 }
 
 .feature4 {
-  background-image: url("../../public/assets/images/feature4.jpg");
+  background-image: url("../../public/assets/images/features/feature4.jpg");
 }
 
 .feature5 {
-  background-image: url("../../public/assets/images/feature5.jpg");
+  background-image: url("../../public/assets/images/features/feature5.jpg");
 }
 
 .feature6 {
-  background-image: url("../../public/assets/images/feature6.jpg");
+  background-image: url("../../public/assets/images/features/feature6.jpg");
+}
+
+.feature7 {
+  background-image: url("../../public/assets/images/features/feature7.jpg");
+}
+
+.feature8 {
+  background-image: url("../../public/assets/images/features/feature8.jpg");
+}
+
+.feature9 {
+  background-image: url("../../public/assets/images/features/feature9.jpg");
+}
+
+.feature10 {
+  background-image: url("../../public/assets/images/features/feature10.jpg");
 }
 
 /* Dark overlay for text readability */

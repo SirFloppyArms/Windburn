@@ -1,0 +1,242 @@
+/* ===============================
+   COACHES PAGE STYLES
+   Specialized styling for coach profiles
+================================ */
+
+/* ===============================
+   COACHES INTRO SECTION
+================================ */
+.coaches-intro {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+
+.coaches-intro__image {
+  display: flex;
+  justify-content: center;
+}
+
+.coaches-intro__image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.coaches-intro__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.coaches-intro__content h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.2;
+  color: var(--accent-color);
+}
+
+.coaches-intro__content p {
+  max-width: 65ch;
+  line-height: 1.65;
+  opacity: 0.95;
+  font-size: 1.05rem;
+}
+
+/* ===============================
+   HEAD COACH FEATURED SECTION
+================================ */
+.coach-section--featured {
+  padding: var(--spacing-3xl) var(--spacing-md);
+}
+
+.coach-featured {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: start;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.coach-featured__image {
+  display: flex;
+  justify-content: center;
+}
+
+.coach-featured__image img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+}
+
+.coach-featured__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.coach-badge {
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--primary-color);
+  width: fit-content;
+}
+
+.coach-featured__content h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.coach-featured__content p {
+  max-width: 70ch;
+  line-height: 1.7;
+  opacity: 0.95;
+  margin-bottom: var(--spacing-md);
+}
+
+.coach-featured__content p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* ===============================
+   COACH CARD SECTIONS (ALTERNATING)
+================================ */
+.coach-card {
+  display: grid;
+  gap: clamp(24px, 5vw, 48px);
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.coach-card--left {
+  grid-template-columns: 1fr 1.2fr;
+}
+
+.coach-card--right {
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.coach-card__image {
+  display: flex;
+  justify-content: center;
+}
+
+.coach-card__image img {
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+}
+
+.coach-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.coach-card__content h3 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.2;
+  color: var(--accent-color);
+}
+
+.coach-card__content p {
+  max-width: 60ch;
+  line-height: 1.65;
+  opacity: 0.95;
+  margin-bottom: var(--spacing-sm);
+}
+
+.coach-card__content p:last-of-type {
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--accent-color);
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 900px) {
+  .coaches-intro {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .coaches-intro__image {
+    order: -1;
+  }
+
+  .coaches-intro__image img {
+    max-width: 250px;
+  }
+
+  .coaches-intro__content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .coach-featured {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .coach-featured__image img {
+    max-width: 320px;
+  }
+
+  .coach-featured__content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .coach-card--left,
+  .coach-card--right {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .coach-card__image img {
+    max-width: 280px;
+  }
+
+  .coach-card__content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .coaches-intro__image img {
+    max-width: 180px;
+  }
+
+  .coach-featured__image img {
+    max-width: 240px;
+  }
+
+  .coach-card__image img {
+    max-width: 200px;
+  }
+
+  .coach-featured__content h2 {
+    font-size: 1.5rem;
+  }
+
+  .coach-card__content h3 {
+    font-size: 1.3rem;
+  }
+}
