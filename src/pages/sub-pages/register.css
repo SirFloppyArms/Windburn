@@ -1,0 +1,655 @@
+/* ===============================
+   REGISTER PAGE STYLES
+================================ */
+
+/* ===============================
+   INTRO SECTION
+================================ */
+.register-intro {
+  padding: clamp(48px, 8vw, 120px) 16px;
+  padding-top: clamp(96px, 14vw, 180px);
+  max-width: var(--max-width);
+  margin: 0 auto;
+  background: linear-gradient(
+    135deg,
+    rgba(153, 216, 163, 0.08),
+    rgba(87, 160, 206, 0.08)
+  );
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+}
+
+.intro-text h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--accent-color);
+  line-height: 1.1;
+  margin-bottom: var(--spacing-lg);
+}
+
+.intro-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-dark);
+  opacity: 0.95;
+  max-width: 65ch;
+}
+
+.intro-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-logo img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ===============================
+   REGISTRATION TIERS SECTION
+================================ */
+.registration-tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: clamp(24px, 4vw, 32px);
+}
+
+.tier-card {
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--border-light);
+  border-radius: 16px;
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.tier-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-color);
+}
+
+.tier-header {
+  text-align: center;
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.tier-card h3 {
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.tier-period {
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* EARLY TIER */
+.tier-early {
+  border-color: var(--primary-color);
+  background: linear-gradient(135deg, rgba(153, 216, 163, 0.15), rgba(153, 216, 163, 0.05));
+}
+
+.tier-early .tier-header {
+  background: rgba(153, 216, 163, 0.1);
+  margin: -var(--spacing-xl) -var(--spacing-xl) 0 -var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border-radius: 14px 14px 0 0;
+  border-bottom: none;
+}
+
+.tier-early h3 {
+  color: #2d7a4d;
+}
+
+/* MID TIER (Featured) */
+.tier-mid {
+  border-color: var(--accent-color);
+  background: linear-gradient(135deg, rgba(87, 160, 206, 0.15), rgba(87, 160, 206, 0.05));
+  border-width: 3px;
+  transform: translateY(-12px);
+}
+
+.tier-mid .tier-header {
+  background: rgba(87, 160, 206, 0.15);
+  margin: -var(--spacing-xl) -var(--spacing-xl) 0 -var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border-radius: 14px 14px 0 0;
+  border-bottom: none;
+}
+
+.tier-mid h3 {
+  color: #1a4d7a;
+}
+
+.tier-mid:hover {
+  box-shadow: 0 12px 35px rgba(87, 160, 206, 0.4);
+}
+
+/* LATE TIER */
+.tier-late {
+  border-color: rgba(153, 216, 163, 0.5);
+  background: linear-gradient(135deg, rgba(200, 200, 200, 0.08), rgba(200, 200, 200, 0.02));
+}
+
+.tier-late .tier-header {
+  background: rgba(200, 200, 200, 0.1);
+  margin: -var(--spacing-xl) -var(--spacing-xl) 0 -var(--spacing-xl);
+  padding: var(--spacing-lg);
+  border-radius: 14px 14px 0 0;
+  border-bottom: none;
+}
+
+/* PRICING */
+.tier-prices {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg) 0;
+  border-top: 2px solid var(--border-light);
+  border-bottom: 2px solid var(--border-light);
+}
+
+.tier-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.distance-name {
+  color: var(--text-dark);
+  font-weight: var(--font-weight-medium);
+  opacity: 0.85;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--accent-color);
+}
+
+/* BENEFITS */
+.tier-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.tier-benefits li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-sm);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  opacity: 0.85;
+}
+
+.tier-benefits li::before {
+  content: "✓";
+  color: var(--primary-color);
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* REGISTER BUTTON */
+.tier-register-btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--accent-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 999px;
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.tier-register-btn:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===============================
+   COUNTDOWN SECTION
+================================ */
+.countdown-section {
+  text-align: center;
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-3xl) var(--spacing-md);
+}
+
+.countdown-timer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: clamp(12px, 3vw, 32px);
+  width: 100%;
+  max-width: 600px;
+}
+
+.countdown-item {
+  background: rgba(87, 160, 206, 0.08);
+  border: 2px solid var(--accent-color);
+  border-radius: 12px;
+  padding: var(--spacing-xl) var(--spacing-lg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.countdown-number {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: var(--font-weight-extrabold);
+  color: var(--accent-color);
+  line-height: 1;
+}
+
+.countdown-label {
+  font-size: 0.9rem;
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dark);
+  opacity: 0.7;
+}
+
+/* ===============================
+   RACE GEAR SECTION
+================================ */
+.gear-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(24px, 4vw, 32px);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.gear-item {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.gear-item:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gear-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.gear-item h3 {
+  padding: 0 var(--spacing-lg);
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.gear-item p {
+  padding: 0 var(--spacing-lg) var(--spacing-lg) var(--spacing-lg);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  opacity: 0.85;
+  margin: 0;
+}
+
+.gear-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
+
+.gear-shop-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  background: var(--primary-color);
+  color: var(--bg-dark);
+  border-radius: 999px;
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.gear-shop-btn:hover {
+  background: var(--accent-color);
+  color: var(--text-light);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.gear-shop-btn i {
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   INFO SECTION
+================================ */
+.info-section {
+  background: linear-gradient(
+    135deg,
+    rgba(153, 216, 163, 0.08),
+    rgba(87, 160, 206, 0.08)
+  );
+  border-radius: 16px;
+}
+
+.info-content h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: var(--accent-color);
+  font-weight: var(--font-weight-extrabold);
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-2xl);
+}
+
+.info-item {
+  text-align: center;
+  padding: var(--spacing-lg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.info-item i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.info-item h3 {
+  font-size: 1.2rem;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.info-item p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* ===============================
+   SPONSORS SECTION
+================================ */
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(24px, 4vw, 40px);
+}
+
+.sponsor-item {
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--border-light);
+  border-radius: 16px;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-lg);
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.sponsor-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.sponsor-logo {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+}
+
+.sponsor-logo img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
+.sponsor-item h3 {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  text-align: center;
+  margin: 0;
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 900px) {
+  .intro-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-2xl);
+    text-align: center;
+  }
+
+  .intro-text p {
+    max-width: 100%;
+  }
+
+  .intro-logo {
+    order: -1;
+  }
+
+  .tier-mid {
+    transform: translateY(0);
+  }
+
+  .registration-tiers-grid {
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 600px) {
+  .register-intro {
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+  }
+
+  .intro-logo img {
+    max-width: 200px;
+  }
+
+  .tier-card {
+    padding: var(--spacing-lg);
+  }
+
+  .tier-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .countdown-timer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .countdown-item {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
+
+  .gear-item img {
+    height: 200px;
+  }
+
+  .info-grid {
+    gap: var(--spacing-lg);
+  }
+
+  .sponsors-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .register-intro {
+    padding: clamp(48px, 8vw, 80px) var(--spacing-sm);
+  }
+
+  .intro-text h1 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+  }
+
+  .intro-logo img {
+    max-width: 150px;
+  }
+
+  .tier-card {
+    padding: var(--spacing-md);
+  }
+
+  .tier-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .tier-header {
+    padding-bottom: var(--spacing-md);
+  }
+
+  .tier-period {
+    font-size: 0.8rem;
+  }
+
+  .tier-prices {
+    gap: var(--spacing-sm);
+  }
+
+  .tier-benefits {
+    gap: var(--spacing-xs);
+    font-size: 0.85rem;
+  }
+
+  .tier-register-btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    min-height: 44px;
+  }
+
+  .countdown-timer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .countdown-item {
+    padding: var(--spacing-md);
+  }
+
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.75rem;
+  }
+
+  .info-grid {
+    gap: var(--spacing-md);
+  }
+
+  .sponsors-grid {
+    grid-template-columns: 1fr;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    min-height: 44px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .intro-text h1 {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+  }
+
+  .countdown-number {
+    font-size: 1.2rem;
+  }
+
+  .tier-benefits li {
+    font-size: 0.8rem;
+  }
+}

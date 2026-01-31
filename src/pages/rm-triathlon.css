@@ -243,51 +243,6 @@
 }
 
 /* ===============================
-   REGISTRATION SECTION
-================================ */
-.registration-section {
-  text-align: center;
-}
-
-.registration-links {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: var(--spacing-lg);
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.registration-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--spacing-sm);
-
-  padding: var(--spacing-lg) var(--spacing-xl);
-  background: var(--accent-color);
-  color: var(--text-light);
-  border: none;
-  border-radius: 999px;
-  font-weight: var(--font-weight-semibold);
-  font-size: 1rem;
-
-  transition:
-    transform var(--transition-fast),
-    box-shadow var(--transition-fast),
-    background var(--transition-fast);
-}
-
-.registration-button:hover {
-  background: var(--primary-color);
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-lg);
-}
-
-.registration-button i {
-  font-size: 1.2rem;
-}
-
-/* ===============================
    COUNTDOWN SECTION
 ================================ */
 .countdown-section {
@@ -296,7 +251,10 @@
 
 .countdown-container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  gap: var(--spacing-2xl);
   padding: var(--spacing-3xl) var(--spacing-md);
 }
 
@@ -334,6 +292,32 @@
   letter-spacing: 0.08em;
   color: var(--text-dark);
   opacity: 0.7;
+}
+
+.countdown-action {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--spacing-lg);
+}
+
+.register-now-btn {
+  padding: var(--spacing-lg) var(--spacing-2xl);
+  background: var(--accent-color);
+  color: var(--text-light);
+  border-radius: 999px;
+  font-weight: var(--font-weight-semibold);
+  font-size: 1rem;
+
+  transition:
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    background var(--transition-fast);
+}
+
+.register-now-btn:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
 }
 
 /* ===============================
@@ -870,5 +854,143 @@
   .section-title {
     font-size: 1.8rem;
     margin-bottom: var(--spacing-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .rm-hero {
+    min-height: 45vh;
+    padding: clamp(40px, 6vw, 80px) 16px;
+    padding-top: clamp(80px, 12vw, 120px);
+  }
+
+  .rm-hero-content {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .rm-hero-logo {
+    max-width: 70px;
+    margin-bottom: 12px;
+  }
+
+  .rm-hero-content h1 {
+    font-size: clamp(1.5rem, 5vw, 2.2rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .rm-hero-content p {
+    font-size: clamp(0.85rem, 2vw, 1rem);
+  }
+
+  .race-history {
+    gap: var(--spacing-md);
+  }
+
+  .history-text h2 {
+    font-size: clamp(1.5rem, 4vw, 1.8rem);
+  }
+
+  .history-stats {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .stat-card {
+    padding: var(--spacing-md);
+    text-align: center;
+  }
+
+  .stat-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .stat-card p {
+    font-size: 0.85rem;
+  }
+
+  .distance-card {
+    padding: var(--spacing-lg);
+  }
+
+  .countdown-timer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+  }
+
+  .countdown-item {
+    padding: var(--spacing-md);
+  }
+
+  .countdown-number {
+    font-size: 1.5rem;
+  }
+
+  .countdown-label {
+    font-size: 0.7rem;
+  }
+
+  .registration-links {
+    gap: var(--spacing-md);
+  }
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+  }
+
+  .quotes-container {
+    gap: var(--spacing-lg);
+  }
+
+  .quote-card {
+    padding: var(--spacing-lg);
+  }
+
+  .quote-card p {
+    font-size: 0.9rem;
+  }
+
+  .quote-card span {
+    font-size: 0.85rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 5vw, 1.8rem);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .faq-item {
+    padding: var(--spacing-lg);
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .rm-hero-logo {
+    max-width: 60px;
+  }
+
+  .stat-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .distance-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.3rem, 4vw, 1.5rem);
   }
 }

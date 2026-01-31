@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Register for the 2026 Riding Mountain Triathlon. Early bird discounts, multiple distance options, and easy online registration." />
+  <meta name="keywords" content="triathlon registration, RM triathlon register, riding mountain race, triathlon event" />
+  <meta property="og:title" content="Register - RM Triathlon" />
+  <meta property="og:description" content="Join us for the 2026 Riding Mountain Triathlon. Register now and secure your spot!" />
+  <meta property="og:type" content="website" />
+  <title>Register - RM Triathlon 2026</title>
+  <link rel="stylesheet" href="../../styles/global.css" />
+  <link rel="stylesheet" href="../../components/header/index_header.css" />
+  <link rel="stylesheet" href="../../components/footer/footer.css" />
+  <link rel="stylesheet" href="register.css" />
+  <link rel="icon" href="../../../public/assets/images/favicon.ico" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/a2d9d5f8e2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- HERO SECTION WITH INTRO -->
+  <section class="register-intro">
+    <div class="intro-content">
+      <div class="intro-text">
+        <h1>Join the Race Experience</h1>
+        <p>Register for the Riding Mountain Triathlon and become part of an incredible community of athletes. Choose your distance, secure your spot, and prepare for an unforgettable day on Canada's most scenic triathlon course.</p>
+      </div>
+      <div class="intro-logo">
+        <img src="../../../public/assets/images/rm_logo.png" alt="RM Triathlon Logo">
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 1 -->
+  <section class="feature feature-bg--primary">
+    <div class="feature-content">
+      <h2>
+        Ready to Challenge Yourself?<br>
+        <span>Register Today and Secure Your Spot</span>
+      </h2>
+      <a href="#registration-tiers" class="btn feature-btn">View Registration Options</a>
+    </div>
+  </section>
+
+  <!-- REGISTRATION TIERS SECTION -->
+  <section class="section" id="registration-tiers">
+    <h2 class="section-title">Registration Tiers</h2>
+    <p class="section-subtitle">Choose your registration window and enjoy tiered pricing</p>
+    <div class="registration-tiers-grid">
+      
+      <!-- EARLY REGISTRATION -->
+      <div class="tier-card tier-early">
+        <div class="tier-header">
+          <h3>Early Registration</h3>
+          <p class="tier-period">January - March 2026</p>
+        </div>
+        <div class="tier-prices">
+          <div class="tier-price-row">
+            <span class="distance-name">Super Sprint</span>
+            <span class="price">$85</span>
+          </div>
+          <div class="tier-price-row">
+            <span class="distance-name">Sprint</span>
+            <span class="price">$120</span>
+          </div>
+          <div class="tier-price-row">
+            <span class="distance-name">Olympic</span>
+            <span class="price">$160</span>
+          </div>
+        </div>
+        <ul class="tier-benefits">
+          <li>15% Discount off regular price</li>
+          <li>Early start wave selection</li>
+          <li>Exclusive early bird t-shirt</li>
+          <li>Priority transition access</li>
+        </ul>
+        <button class="tier-register-btn">Register Early</button>
+      </div>
+
+      <!-- MID REGISTRATION -->
+      <div class="tier-card tier-mid">
+        <div class="tier-header">
+          <h3>Standard Registration</h3>
+          <p class="tier-period">April - June 2026</p>
+        </div>
+        <div class="tier-prices">
+          <div class="tier-price-row">
+            <span class="distance-name">Super Sprint</span>
+            <span class="price">$100</span>
+          </div>
+          <div class="tier-price-row">
+            <span class="distance-name">Sprint</span>
+            <span class="price">$140</span>
+          </div>
+          <div class="tier-price-row">
+            <span class="distance-name">Olympic</span>
+            <span class="price">$185</span>
+          </div>
+        </div>
+        <ul class="tier-benefits">
+          <li>Standard pricing</li>
+          <li>Wave selection (based on availability)</li>
+          <li>Standard event t-shirt</li>
+          <li>Access to all race perks</li>
+        </ul>
+        <button class="tier-register-btn">Register Now</button>
+      </div>
+
+      <!-- LATE REGISTRATION -->
+      <div class="tier-card tier-late">
+        <div class="tier-header">
+          <h3>Late Registration</h3>
+          <p class="tier-period">July - August 8, 2026</p>
+        </div>
+        <div class="tier-prices">
+          <div class="tier-price-row">
+            <span class="distance-name">Super Sprint</span>
+            <span class="price">$115</span>
+          </div>
+          <div class="tier-price-row">
+            <span class="distance-name">Sprint</span>
+            <span class="price">$160</span>
+          </div>
+          <div class="tier-price-row">
+            <span class="distance-name">Olympic</span>
+            <span class="price">$205</span>
+          </div>
+        </div>
+        <ul class="tier-benefits">
+          <li>Late bird pricing</li>
+          <li>Wave assignment based on capacity</li>
+          <li>Standard event t-shirt</li>
+          <li>Race day registration available</li>
+        </ul>
+        <button class="tier-register-btn">Register Late</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COUNTDOWN SECTION -->
+  <section class="section countdown-section">
+    <h2 class="section-title">Time Until Race Day</h2>
+    <div class="countdown-container">
+      <div class="countdown-timer" id="countdown">
+        <div class="countdown-item">
+          <div class="countdown-number">0</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number">0</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number">0</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number">0</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 2 -->
+  <section class="feature feature-bg--secondary">
+    <div class="feature-content">
+      <h2>
+        Prepare Like a Champion<br>
+        <span>Get Your Gear and Train Smart</span>
+      </h2>
+      <a href="#race-gear" class="btn feature-btn">Shop Race Gear</a>
+    </div>
+  </section>
+
+  <!-- RACE GEAR SECTION -->
+  <section class="section" id="race-gear">
+    <h2 class="section-title">Official Race Gear</h2>
+    <p class="section-subtitle">Equip yourself with quality gear from our official partner</p>
+    <div class="gear-grid">
+      <div class="gear-item">
+        <img src="../../../public/assets/images/gear1.jpg" alt="Triathlon Wetsuit">
+        <h3>Wetsuits</h3>
+        <p>Professional-grade wetsuits designed for open water swimming in all conditions</p>
+      </div>
+      <div class="gear-item">
+        <img src="../../../public/assets/images/gear2.jpg" alt="Cycling Jersey">
+        <h3>Cycling Gear</h3>
+        <p>Performance cycling jerseys, shorts, and accessories for maximum comfort</p>
+      </div>
+      <div class="gear-item">
+        <img src="../../../public/assets/images/gear3.jpg" alt="Running Shoes">
+        <h3>Running Equipment</h3>
+        <p>Specialized running shoes and apparel engineered for trail and road racing</p>
+      </div>
+      <div class="gear-item">
+        <img src="../../../public/assets/images/gear4.jpg" alt="Accessories">
+        <h3>Accessories</h3>
+        <p>Hydration systems, nutrition products, and essential race day accessories</p>
+      </div>
+    </div>
+    <div class="gear-cta">
+      <a href="https://worldtriathlonstore.ca/collections/riding-mountain-triathlon" target="_blank" class="btn gear-shop-btn">
+        Shop Official Gear Store
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- INFO SECTION -->
+  <section class="section info-section">
+    <div class="info-content">
+      <h2>What's Included in Your Registration</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <i class="fas fa-medal"></i>
+          <h3>Finisher's Medal</h3>
+          <p>A custom medal recognizing your achievement at the finish line.</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-shirt"></i>
+          <h3>Event T-Shirt</h3>
+          <p>Official RM Triathlon event t-shirt available in multiple sizes.</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-utensils"></i>
+          <h3>Post-Race Meals</h3>
+          <p>Nutritious food and beverages at the finish line celebration area.</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-map"></i>
+          <h3>Race Materials</h3>
+          <p>Comprehensive race kit with maps, timing information, and instructions.</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-camera"></i>
+          <h3>Professional Photos</h3>
+          <p>Access to professional race day photography via our online gallery.</p>
+        </div>
+        <div class="info-item">
+          <i class="fas fa-users"></i>
+          <h3>Community Access</h3>
+          <p>Join our exclusive community forum for training tips and race updates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 3 -->
+  <section class="feature feature-bg--tertiary">
+    <div class="feature-content">
+      <h2>
+        Be Part of Something Special<br>
+        <span>Join Our Growing Community</span>
+      </h2>
+      <a href="#sponsors" class="btn feature-btn">Meet Our Partners</a>
+    </div>
+  </section>
+
+  <!-- SPONSORS SECTION -->
+  <section class="section" id="sponsors">
+    <h2 class="section-title">Our Sponsors & Partners</h2>
+    <p class="section-subtitle">Thank you to the organizations making RM Triathlon possible</p>
+    <div class="sponsors-grid">
+      <div class="sponsor-item">
+        <div class="sponsor-logo">
+          <img src="../../../public/assets/images/sponsors/sponsor1.png" alt="Sponsor 1">
+        </div>
+        <h3>Sponsor Name</h3>
+      </div>
+      <div class="sponsor-item">
+        <div class="sponsor-logo">
+          <img src="../../../public/assets/images/sponsors/sponsor2.png" alt="Sponsor 2">
+        </div>
+        <h3>Sponsor Name</h3>
+      </div>
+      <div class="sponsor-item">
+        <div class="sponsor-logo">
+          <img src="../../../public/assets/images/sponsors/sponsor3.png" alt="Sponsor 3">
+        </div>
+        <h3>Sponsor Name</h3>
+      </div>
+      <div class="sponsor-item">
+        <div class="sponsor-logo">
+          <img src="../../../public/assets/images/sponsors/sponsor4.png" alt="Sponsor 4">
+        </div>
+        <h3>Sponsor Name</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../../styles/global.js"></script>
+  <script src="../../components/header/header.js"></script>
+  <script src="register.js"></script>
+
+  <!-- HEADER & FOOTER LOADER -->
+  <script>
+    fetch("../../components/header/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+
+        // ✅ Initialize AFTER header exists
+        initStickyHeader();
+        initPhoneMenu();
+        
+        // ✅ Set active nav link based on current page
+        setActiveNavLink(getCurrentPageName());
+      });
+
+    fetch("../../components/footer/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
