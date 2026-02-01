@@ -37,6 +37,13 @@
   color: var(--accent-color);
 }
 
+.coaches-intro__content h2 {
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.2;
+  color: var(--accent-color);
+}
+
 .coaches-intro__content p {
   max-width: 65ch;
   line-height: 1.65;

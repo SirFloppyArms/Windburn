@@ -20,103 +20,32 @@
   <!-- HEADER -->
   <div id="header-placeholder"></div>
 
-  <!-- PAGE INTRO -->
-  <section class="section" style="padding-top: 80px;">
-    <h1 style="color: var(--accent-color); margin-bottom: 16px;">News & Updates</h1>
-    <p style="font-size: 1.05rem; opacity: 0.9; max-width: 70ch;">Stay informed with the latest news from Windburn Multi-Sport Academy. Discover race results, team highlights, training updates, and announcements.</p>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <h1>News & Updates</h1>
+      <p class="page-hero__subtitle">Stay informed with the latest news from Windburn Multi-Sport Academy. Discover race results, team highlights, training updates, and announcements.</p>
+    </div>
   </section>
 
   <!-- NEWS GRID -->
   <section class="section">
-    <div class="news-grid">
-      <!-- News Item 1 -->
-      <article class="news-card">
-        <div class="news-date">
-          <span class="news-month">Jan</span>
-          <span class="news-day">15</span>
-        </div>
-        <div class="news-content">
-          <h3>RM Triathlon Registration Now Open</h3>
-          <p class="news-excerpt">Early bird registration for the 2026 Riding Mountain Triathlon is now open with special discounts and early wave selection available.</p>
-          <a href="/src/pages/sub-pages/register.html" class="news-link">Learn More <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <!-- News Item 2 -->
-      <article class="news-card">
-        <div class="news-date">
-          <span class="news-month">Jan</span>
-          <span class="news-day">10</span>
-        </div>
-        <div class="news-content">
-          <h3>Winter Training Camp Success</h3>
-          <p class="news-excerpt">Our winter training camp wrapped up with excellent progression across all age groups. Athletes showed remarkable improvement in technique and endurance.</p>
-          <a href="#" class="news-link">Read Full Story <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <!-- News Item 3 -->
-      <article class="news-card">
-        <div class="news-date">
-          <span class="news-month">Dec</span>
-          <span class="news-day">28</span>
-        </div>
-        <div class="news-content">
-          <h3>New Coaching Staff Announcement</h3>
-          <p class="news-excerpt">We're excited to welcome new assistant coaches to the Windburn family. Meet the expanded team dedicated to athlete development and performance.</p>
-          <a href="/src/pages/sub-pages/coaches.html" class="news-link">Meet Our Team <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <!-- News Item 4 -->
-      <article class="news-card">
-        <div class="news-date">
-          <span class="news-month">Dec</span>
-          <span class="news-day">15</span>
-        </div>
-        <div class="news-content">
-          <h3>2025 Season Highlights & Achievements</h3>
-          <p class="news-excerpt">An incredible year of racing and development. Our athletes achieved personal bests and podium finishes across multiple competitions.</p>
-          <a href="#" class="news-link">View Highlights <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <!-- News Item 5 -->
-      <article class="news-card">
-        <div class="news-date">
-          <span class="news-month">Dec</span>
-          <span class="news-day">5</span>
-        </div>
-        <div class="news-content">
-          <h3>DEVO Team Recruitment Now Open</h3>
-          <p class="news-excerpt">Looking for young athletes aged 12-15 to join our development program. Early registration opens for the 2026 training season.</p>
-          <a href="/src/pages/windburn-race-team.html" class="news-link">Learn About DEVO <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </article>
-
-      <!-- News Item 6 -->
-      <article class="news-card">
-        <div class="news-date">
-          <span class="news-month">Nov</span>
-          <span class="news-day">20</span>
-        </div>
-        <div class="news-content">
-          <h3>Partnership Expansion with Local Businesses</h3>
-          <p class="news-excerpt">We're thrilled to announce new partnerships with leading local and national companies that support our mission of athlete development.</p>
-          <a href="/src/pages/index.html#partners" class="news-link">View Partners <i class="fas fa-arrow-right"></i></a>
-        </div>
-      </article>
+    <div id="news-grid" class="news-grid">
+      <!-- News items will be loaded here dynamically -->
+      <div style="text-align: center; padding: 2rem; grid-column: 1 / -1;">
+        <p>Loading news articles...</p>
+      </div>
     </div>
   </section>
 
   <!-- NEWSLETTER SIGNUP -->
-  <section class="section" style="background: rgba(153, 216, 163, 0.1); border-radius: 12px; padding: var(--spacing-2xl);">
-    <div style="max-width: 600px; margin: 0 auto; text-align: center;">
-      <h2 style="color: var(--accent-color); margin-bottom: 12px;">Stay Updated</h2>
-      <p style="margin-bottom: var(--spacing-lg); opacity: 0.9;">Subscribe to our newsletter for exclusive updates, training tips, and event announcements.</p>
-      <form style="display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;">
-        <input type="email" placeholder="Enter your email" required style="padding: 12px 16px; border: 1px solid var(--accent-color); border-radius: 4px; flex: 1; min-width: 200px; font-size: 1rem; font-family: inherit;">
-        <button type="submit" class="btn" style="margin-top: 0;">Subscribe</button>
+  <section class="section newsletter-section">
+    <div class="newsletter-content">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for exclusive updates, training tips, and event announcements.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
       </form>
     </div>
   </section>
@@ -127,6 +56,51 @@
   <!-- SCRIPTS -->
   <script src="../styles/global.js"></script>
   <script src="../components/header/header.js"></script>
+
+  <!-- NEWS LOADING SCRIPT -->
+  <script>
+    const NEWS_DATA_URL = "../../data/news.json";
+
+    async function loadNews() {
+      const newsGrid = document.getElementById('news-grid');
+
+      try {
+        const response = await fetch(NEWS_DATA_URL, { cache: "no-cache" });
+        if (!response.ok) throw new Error('Failed to fetch news');
+
+        const newsArticles = await response.json();
+
+        if (newsArticles.length === 0) {
+          newsGrid.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">No news articles available.</p>';
+          return;
+        }
+
+        newsGrid.innerHTML = newsArticles.map(article => `
+          <article class="news-card">
+            <div class="news-date">
+              <span class="news-month">${article.month}</span>
+              <span class="news-day">${article.day}</span>
+            </div>
+            <div class="news-content">
+              <h3>${article.title}</h3>
+              <p class="news-excerpt">${article.excerpt}</p>
+              <a href="${article.link}" class="news-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+        `).join('');
+      } catch (err) {
+        newsGrid.innerHTML = `
+          <div style="text-align: center; padding: 2rem; grid-column: 1 / -1;">
+            <p style="color: #666;">Unable to load news articles at the moment.</p>
+            <p style="color: #999; font-size: 0.9rem;">Make sure data/news.json is accessible.</p>
+          </div>
+        `;
+        console.error('News loading error:', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadNews);
+  </script>
 
   <!-- HEADER & FOOTER LOADER -->
   <script>

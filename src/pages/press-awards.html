@@ -14,85 +14,23 @@
   <link rel="stylesheet" href="../components/footer/footer.css" />
   <link rel="icon" href="../../public/assets/images/favicon.ico" type="image/x-icon" />
   <script src="https://kit.fontawesome.com/a2d9d5f8e2.js" crossorigin="anonymous"></script>
-  <style>
-    .award-item {
-      background: white;
-      padding: var(--spacing-lg);
-      border-radius: 8px;
-      border-left: 4px solid var(--accent-color);
-      margin-bottom: var(--spacing-lg);
-      box-shadow: var(--shadow-sm);
-      transition: all var(--transition-normal);
-    }
-
-    .award-item:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-
-    .award-year {
-      display: inline-block;
-      background: var(--accent-color);
-      color: white;
-      padding: 4px 12px;
-      border-radius: 999px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .award-item h3 {
-      margin-top: 0;
-      color: var(--accent-color);
-      font-size: 1.1rem;
-    }
-
-    .award-item p {
-      margin-bottom: 0;
-      opacity: 0.85;
-    }
-
-    .media-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: var(--spacing-lg);
-      margin-top: var(--spacing-2xl);
-    }
-
-    .media-card {
-      background: linear-gradient(135deg, rgba(153, 216, 163, 0.1), rgba(87, 160, 206, 0.1));
-      padding: var(--spacing-lg);
-      border-radius: 8px;
-      text-align: center;
-      border: 1px solid rgba(87, 160, 206, 0.2);
-    }
-
-    .media-card i {
-      font-size: 2.5rem;
-      color: var(--accent-color);
-      margin-bottom: var(--spacing-md);
-    }
-
-    .media-card h4 {
-      color: var(--text-dark);
-      margin-bottom: var(--spacing-sm);
-    }
-  </style>
 </head>
 <body>
 
   <!-- HEADER -->
   <div id="header-placeholder"></div>
 
-  <!-- PAGE INTRO -->
-  <section class="section" style="padding-top: 80px;">
-    <h1 style="color: var(--accent-color); margin-bottom: 16px;">Press & Awards</h1>
-    <p style="font-size: 1.05rem; opacity: 0.9; max-width: 70ch;">Celebrating the achievements, recognition, and media coverage of Windburn Multi-Sport Academy and our athletes in the competitive triathlon community.</p>
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <h1>Press & Awards</h1>
+      <p class="page-hero__subtitle">Celebrating the achievements, recognition, and media coverage of Windburn Multi-Sport Academy and our athletes in the competitive triathlon community.</p>
+    </div>
   </section>
 
   <!-- AWARDS SECTION -->
-  <section class="section">
-    <h2 style="color: var(--text-dark); margin-bottom: var(--spacing-2xl);">Team Awards & Recognition</h2>
+  <section class="section awards-section">
+    <h2 class="section-heading">Team Awards & Recognition</h2>
 
     <div class="award-item">
       <span class="award-year">2025</span>
@@ -127,7 +65,7 @@
 
   <!-- MEDIA COVERAGE SECTION -->
   <section class="section">
-    <h2 style="color: var(--text-dark); margin-bottom: var(--spacing-2xl);">Media Coverage</h2>
+    <h2 class="section-heading">Media Coverage</h2>
     <p>Windburn Multi-Sport Academy has been featured in leading sports media and local publications. Our athletes and programs have gained recognition for their competitive excellence and community impact.</p>
 
     <div class="media-grid">
@@ -144,7 +82,7 @@
       </div>
 
       <div class="media-card">
-        <i class="fas fa-magazine"></i>
+        <i class="fas fa-book-open"></i>
         <h4>Magazine Articles</h4>
         <p>In-depth features in triathlon and sports lifestyle publications</p>
       </div>
@@ -170,37 +108,37 @@
   </section>
 
   <!-- ATHLETE ACHIEVEMENTS -->
-  <section class="section" style="background: rgba(153, 216, 163, 0.05); border-radius: 12px; padding: var(--spacing-2xl);">
-    <h2 style="color: var(--text-dark); text-align: center; margin-bottom: var(--spacing-2xl);">Athlete Achievements</h2>
+  <section class="section newsletter-section">
+    <h2 class="section-heading section-heading--center">Athlete Achievements</h2>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--spacing-lg); max-width: 100%;">
-      <div style="text-align: center; padding: var(--spacing-lg);">
-        <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-color); margin-bottom: 8px;">40+</div>
-        <div style="font-weight: 600; color: var(--text-dark);">Competitive Athletes</div>
-        <div style="font-size: 0.9rem; opacity: 0.8;">Training Year-Round</div>
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-item__number">40+</div>
+        <div class="stat-item__label">Competitive Athletes</div>
+        <div class="stat-item__sublabel">Training Year-Round</div>
       </div>
 
-      <div style="text-align: center; padding: var(--spacing-lg);">
-        <div style="font-size: 2.5rem; font-weight: 800; color: var(--primary-color); margin-bottom: 8px;">100+</div>
-        <div style="font-weight: 600; color: var(--text-dark);">Podium Finishes</div>
-        <div style="font-size: 0.9rem; opacity: 0.8;">National Competitions</div>
+      <div class="stat-item">
+        <div class="stat-item__number stat-item__number--alt">100+</div>
+        <div class="stat-item__label">Podium Finishes</div>
+        <div class="stat-item__sublabel">National Competitions</div>
       </div>
 
-      <div style="text-align: center; padding: var(--spacing-lg);">
-        <div style="font-size: 2.5rem; font-weight: 800; color: var(--accent-color); margin-bottom: 8px;">50+</div>
-        <div style="font-weight: 600; color: var(--text-dark);">Personal Records</div>
-        <div style="font-size: 0.9rem; opacity: 0.8;">Achieved Annually</div>
+      <div class="stat-item">
+        <div class="stat-item__number">50+</div>
+        <div class="stat-item__label">Personal Records</div>
+        <div class="stat-item__sublabel">Achieved Annually</div>
       </div>
     </div>
   </section>
 
   <!-- PRESS INQUIRIES -->
-  <section class="section" style="background: rgba(87, 160, 206, 0.08); border-radius: 12px; padding: var(--spacing-2xl); text-align: center;">
-    <h2 style="color: var(--accent-color); margin-bottom: var(--spacing-md);">Press Inquiries</h2>
-    <p style="margin-bottom: var(--spacing-lg); opacity: 0.9;">For media inquiries, interview requests, or press releases, please contact us:</p>
-    <div style="display: flex; justify-content: center; gap: var(--spacing-lg); flex-wrap: wrap;">
-      <a href="mailto:press@windburn.ca" class="btn" style="margin-top: 0;">Email Press Team</a>
-      <a href="tel:+12041234567" class="btn btn--ghost" style="margin-top: 0;">Call Us</a>
+  <section class="section contact-cta">
+    <h2>Press Inquiries</h2>
+    <p>For media inquiries, interview requests, or press releases, please contact us:</p>
+    <div class="flex-center gap-lg" style="flex-wrap: wrap;">
+      <a href="mailto:press@windburn.ca" class="btn btn--no-margin">Email Press Team</a>
+      <a href="tel:+12041234567" class="btn btn--ghost btn--no-margin">Call Us</a>
     </div>
   </section>
 
