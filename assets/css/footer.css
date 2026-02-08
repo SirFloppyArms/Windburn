@@ -72,7 +72,7 @@
   background: rgba(255, 255, 255, 0.1);
   color: var(--primary-color);
   transition: all var(--transition-fast);
-  font-size: 1.1rem;
+  font-size: 1.5rem;
 }
 
 .footer-socials a:hover {
