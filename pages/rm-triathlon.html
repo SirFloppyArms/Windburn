@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Riding Mountain Triathlon - Canada's premier triathlon event nestled in scenic Riding Mountain National Park. Multi-distance race with 500+ athletes annually." />
+  <meta name="keywords" content="riding mountain triathlon, RM triathlon, Manitoba triathlon, triathlon race" />
+  <meta property="og:title" content="RM Triathlon - Riding Mountain Race" />
+  <meta property="og:description" content="Challenge yourself in one of Canada's most scenic triathlon races in Riding Mountain National Park." />
+  <meta property="og:type" content="website" />
+  <title>RM Triathlon - Riding Mountain Race</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/index-header.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="stylesheet" href="../assets/css/rm-triathlon.css" />
+  <link rel="icon" href="../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/a2d9d5f8e2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- HERO SECTION WITH RACE LOGO -->
+  <section class="rm-hero">
+    <div class="rm-hero-overlay"></div>
+    <div class="rm-hero-content">
+      <img src="../assets/images/logos/rm_logo.png" alt="RM Triathlon Logo" class="rm-hero-logo">
+      <h1>Riding Mountain Triathlon</h1>
+      <p>Challenge yourself in one of Canada's most scenic triathlon races</p>
+    </div>
+  </section>
+
+  <!-- RACE HISTORY SECTION -->
+  <section class="section">
+    <div class="race-history">
+      <div class="history-text">
+        <h2>The History of RM Triathlon</h2>
+        <p>
+          The Riding Mountain Triathlon has been a cornerstone of the Manitoba triathlon community for over a decade. 
+          Nestled within the stunning landscape of Riding Mountain National Park, this race combines breathtaking natural beauty 
+          with a challenging course that tests athletes of all levels.
+        </p>
+        <p>
+          Founded with a vision to inspire athletes and celebrate outdoor sport, RM Triathlon has grown into one of Canada's 
+          premier triathlon events. Each year, hundreds of competitors from across North America gather to experience the unique 
+          blend of competitive racing and natural wonder that makes this race truly special.
+        </p>
+        <p>
+          From its humble beginnings to becoming a nationally recognized event, RM Triathlon remains committed to fostering a 
+          welcoming, inclusive, and competitive community of multi-sport athletes.
+        </p>
+      </div>
+      <div class="history-stats">
+        <div class="stat-card">
+          <h3>12+</h3>
+          <p>Years of Racing</p>
+        </div>
+        <div class="stat-card">
+          <h3>500+</h3>
+          <p>Annual Participants</p>
+        </div>
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Scenic Beauty</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RACE DISTANCES SECTION -->
+  <section class="section">
+    <h2 class="section-title">Race Distances</h2>
+    <div class="distances-grid">
+      <div class="distance-card">
+        <div class="distance-header">
+          <h3>Super Sprint Distance</h3>
+          <span class="distance-badge">Beginner Friendly</span>
+        </div>
+        <div class="distance-details">
+          <div class="distance-item">
+            <span class="sport-icon">🏊</span>
+            <span class="distance-text">Swim: 400m</span>
+          </div>
+          <div class="distance-item">
+            <span class="sport-icon">🚴</span>
+            <span class="distance-text">Bike: 10km</span>
+          </div>
+          <div class="distance-item">
+            <span class="sport-icon">🏃</span>
+            <span class="distance-text">Run: 2.5km</span>
+          </div>
+        </div>
+        <p class="distance-description">Perfect for first-time triathletes and those looking for a fun, competitive experience.</p>
+      </div>
+
+      <div class="distance-card">
+        <div class="distance-header">
+          <h3>Sprint Distance</h3>
+          <span class="distance-badge">Most Popular</span>
+        </div>
+        <div class="distance-details">
+          <div class="distance-item">
+            <span class="sport-icon">🏊</span>
+            <span class="distance-text">Swim: 750m</span>
+          </div>
+          <div class="distance-item">
+            <span class="sport-icon">🚴</span>
+            <span class="distance-text">Bike: 20km</span>
+          </div>
+          <div class="distance-item">
+            <span class="sport-icon">🏃</span>
+            <span class="distance-text">Run: 5km</span>
+          </div>
+        </div>
+        <p class="distance-description">The classic triathlon distance. Challenging yet achievable for trained athletes.</p>
+      </div>
+
+      <div class="distance-card">
+        <div class="distance-header">
+          <h3>Olympic Distance</h3>
+          <span class="distance-badge">Advanced</span>
+        </div>
+        <div class="distance-details">
+          <div class="distance-item">
+            <span class="sport-icon">🏊</span>
+            <span class="distance-text">Swim: 1.5km</span>
+          </div>
+          <div class="distance-item">
+            <span class="sport-icon">🚴</span>
+            <span class="distance-text">Bike: 40km</span>
+          </div>
+          <div class="distance-item">
+            <span class="sport-icon">🏃</span>
+            <span class="distance-text">Run: 10km</span>
+          </div>
+        </div>
+        <p class="distance-description">For the dedicated endurance athlete. A true test of mental and physical strength.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RACE DAY COUNTDOWN & REGISTRATION -->
+  <section class="section countdown-section">
+    <h2 class="section-title">Next Race</h2>
+    <div class="countdown-container">
+      <div class="countdown-timer" id="countdown">
+        <div class="countdown-item">
+          <div class="countdown-number">0</div>
+          <div class="countdown-label">Days</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number">0</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number">0</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <div class="countdown-item">
+          <div class="countdown-number">0</div>
+          <div class="countdown-label">Seconds</div>
+        </div>
+      </div>
+      <div class="countdown-action">
+        <a href="sub-pages/register.html" class="btn register-now-btn">Register Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTES SECTION -->
+  <section class="quotes-section">
+    <div class="quotes-container">
+      <div class="quote-card">
+        <p class="quote-text">"It made me smile when I crossed the line because I just love this race so much"</p>
+        <p class="quote-author">— JOSH MALENCHAK- BRANDON SUN</p>
+      </div>
+      <div class="quote-card">
+        <p class="quote-text">"The “Clear Lake Crew” has made quite the impression on the racers with their enthusiastic support."</p>
+        <p class="quote-author">— VOLUNTEERS - BRANDON SUN</p>
+      </div>
+      <div class="quote-card">
+        <p class="quote-text">"We had more people come to us and just tell us what a great time they had, it was far more than usual. A lot of times it’s comparing it to different races, but this time there was a level of sincerity and a true appreciation of the day and how it all came together."</p>
+        <p class="quote-author">— ELLIS CROWSTON - BRANDON SUN</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 5 -->
+  <section class="feature feature5">
+    <div class="feature-content">
+      <h2>
+        Swim Through Crystal Clear Lakes<br>
+        <span>Experience Nature at Its Finest</span>
+      </h2>
+      <a href="#" class="btn feature-btn">Learn More</a>
+    </div>
+  </section>
+
+    <!-- FAQS / DROPDOWNS SECTION -->
+  <section class="section">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faqs-container">
+      
+      <!-- FAQ 1: Race Registration -->
+      <div class="faq-item">
+        <button class="faq-header" aria-expanded="false">
+          <span>Race Registration</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content" style="display: none;">
+          <div class="faq-body">
+            <p><strong>When does registration open?</strong></p>
+            <p>Registration typically opens 3 months before race day. Early bird pricing is available for the first 100 registrants.</p>
+            
+            <p><strong>Can I change my distance after registering?</strong></p>
+            <p>Yes, you can change your distance up to 2 weeks before the race for a $25 fee. After that, no changes are permitted.</p>
+            
+            <p><strong>Is there a team registration option?</strong></p>
+            <p>Yes! Team registration (minimum 3 people) receives a 15% discount. Teams must have representatives from at least 2 different organizations.</p>
+            
+            <p><strong>What is the refund policy?</strong></p>
+            <p>Full refunds are available up to 4 weeks before race day. After that, transfers to future races are permitted.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2: Race Description -->
+      <div class="faq-item">
+        <button class="faq-header" aria-expanded="false">
+          <span>Race Description & Course Details</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content" style="display: none;">
+          <div class="faq-body">
+            <p><strong>What time does the race start?</strong></p>
+            <p>Sprint distance athletes start at 7:00 AM, Olympic at 8:00 AM, and Half-Ironman at 6:00 AM. Each wave has a 5-minute interval.</p>
+            
+            <p><strong>Is the swim in open water or a pool?</strong></p>
+            <p>The swim takes place in Clear Lake within Riding Mountain National Park. It's a beautiful open-water swim with mild current.</p>
+            
+            <p><strong>What is the bike course like?</strong></p>
+            <p>The bike course is primarily on paved roads with some rolling hills. The terrain is moderate to challenging with spectacular views.</p>
+            
+            <p><strong>Are there aid stations on the course?</strong></p>
+            <p>Yes, there are aid stations every 5-8km on the bike and every 2km on the run. All stations provide water, sports drinks, and nutrition.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3: Volunteer Support -->
+      <div class="faq-item">
+        <button class="faq-header" aria-expanded="false">
+          <span>Volunteer Support & Get Involved</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content" style="display: none;">
+          <div class="faq-body">
+            <p><strong>How can I volunteer?</strong></p>
+            <p>We're always looking for volunteers! Visit our volunteer sign-up page at least 4 weeks before race day. Volunteers receive a free event t-shirt and meals.</p>
+            
+            <p><strong>What volunteer roles are available?</strong></p>
+            <p>Positions include: Course marshals, aid station support, timing/registration, transition area support, and parking coordination.</p>
+            
+            <p><strong>Do I get any benefits for volunteering?</strong></p>
+            <p>Yes! Volunteers receive free entry to the next year's race (same distance), a volunteer t-shirt, meals during the event, and volunteer hours for community service.</p>
+            
+            <p><strong>Can I volunteer if I'm also racing?</strong></p>
+            <p>Absolutely! We have volunteer positions available before and after the races (before the earliest start or after the last finisher).</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4: Partnership & Sponsorship -->
+      <div class="faq-item">
+        <button class="faq-header" aria-expanded="false">
+          <span>Partnership & Sponsorship Opportunities</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
+        <div class="faq-content" style="display: none;">
+          <div class="faq-body">
+            <p><strong>Why should my company sponsor RM Triathlon?</strong></p>
+            <p>RM Triathlon reaches 500+ athletes and their families annually. Sponsorship provides direct brand exposure to active, engaged community members.</p>
+            
+            <p><strong>What sponsorship levels are available?</strong></p>
+            <p>We offer Platinum ($5,000+), Gold ($2,500), Silver ($1,000), and Bronze ($500) sponsorship packages with varying benefits.</p>
+            
+            <p><strong>What does a sponsorship include?</strong></p>
+            <p>Benefits include: Logo placement on race materials, social media promotion, booth/tent space during race day, branded merchandise opportunities, and networking with our community.</p>
+            
+            <p><strong>How do I become a sponsor?</strong></p>
+            <p>Contact our race director at info@rmtriathlon.ca with your interest. We'll send sponsorship package details and discuss custom opportunities for your organization.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURE SECTION 6 -->
+  <section class="feature feature6">
+    <div class="feature-content">
+      <h2>
+        Challenge Yourself on Scenic Trails<br>
+        <span>Join Our Community</span>
+      </h2>
+      <a href="#" class="btn feature-btn">Register Now</a>
+    </div>
+  </section>
+
+    <!-- COURSE MAPS SECTION -->
+  <section class="section">
+    <div class="course-maps-section">
+      <h2 class="section-title">Course Maps & Resources</h2>
+      <p class="section-subtitle">Explore each distance and learn the course before race day</p>
+
+      <!-- COURSE MAPS CONTAINER -->
+      <div class="course-maps-container">
+        <!-- TAB NAVIGATION -->
+        <div class="course-tabs-nav">
+          <button class="course-tab-btn active" data-tab="swim">Swim</button>
+          <button class="course-tab-btn" data-tab="bike">Bike</button>
+          <button class="course-tab-btn" data-tab="bike-profile">Bike Profile</button>
+          <button class="course-tab-btn" data-tab="run">Run</button>
+          <button class="course-tab-btn" data-tab="run-super">Duathlon Run</button>
+          <button class="course-tab-btn" data-tab="transition">Transition</button>
+          <button class="course-tab-btn" data-tab="parking">Parking</button>
+        </div>
+
+        <!-- TAB CONTENT -->
+        <div class="course-maps-content">
+
+          <!-- SWIM TAB -->
+          <div class="course-tab-content active" data-tab="swim">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Swim</h3>
+                <p>The swim starts at the east end of the main beach area. Swimmers will proceed clockwise along a 750 m arrowhead-shaped course. Swimmers will pass the anchored sailboats as they exit the bay into the open water of the lake.</p>
+                <p>Lifeguards in boats as well as kayakers monitor the swimmers as they make their way around the course. Cheers from the enthusiastic crowd lining the beach carries across the water and encourages the athletes along the way.</p>
+                <p>The Olympic athletes complete a two-lap route, while the Sprint athletes complete one lap. Upon completion of the swim, athletes exit the water and run up the stone stairs past the cheering crowd and swim split timers, into the scenic transition zone.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../assets/images/maps/swim_route.jpg" alt="Swim course map">
+              </div>
+            </div>
+          </div>
+
+          <!-- TRANSITION TAB -->
+          <div class="course-tab-content" data-tab="transition">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Transition</h3>
+                <p>The transition zone is a critical part of the race. Upon exiting the water, athletes run approximately 200m along a marked path to enter the transition area where their bikes and gear are positioned.</p>
+                <p>The transition is organized into clearly marked rows. Your bike number corresponds to specific rack locations. All racking is first-come, first-served (except elite seeding). The transition zone features proper spacing to prevent congestion and confusion during the race.</p>
+                <p>Athletes must exit the transition zone using the designated bike exit road. The path is clearly marked and monitored by volunteers. All bikes must be mounted before leaving the transition area.</p>
+                <p>Upon finishing the run, athletes re-enter the transition zone from a separate entrance, deposit their running gear, and proceed to the finish line area.</p>
+                <p>A detailed transition diagram is provided in your race kit. Familiarize yourself with your assigned rack location during race check-in.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../assets/images/maps/transition.jpg" alt="Transition zone map">
+              </div>
+            </div>
+          </div>
+
+          <!-- BIKE TAB -->
+          <div class="course-tab-content" data-tab="bike">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Bike</h3>
+                <p>Once exiting the transition zone, riders mount their bikes. A short cycle along Columbine Street takes athletes to the No. 10 Highway, where a left-hand turn, marshalled by volunteers and the local RCMP, directs the athletes north on an out and back course.</p>
+                <p>Considered one of the most scenic rides on the prairies, the cycling course cuts through the RMNP’s boreal forest. Riders are in awe of the mosaic of mountain and prairie landscapes, which is enhanced by frequent sightings of deer, moose, bears and the occasional lynx or wolf.</p>
+                <p>Both the Olympic and Sprint participants pass the famous Clear Lake Golf Course and embark on the first climb of the day. Once Sprint athletes reach 10 km, they turn around and head back to the town site.</p>
+                <p>The Olympic athletes continue on and are treated to a beautiful ride, capped by a panoramic view of Clear Lake just before they embark on a gentle 5 km climb to the turnaround. Upon return to the town site, riders prepare for their second transition as they glide past the enthusiastic spectators along Columbine Street.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../assets/images/maps/bike_route.jpg" alt="Bike course map">
+              </div>
+            </div>
+          </div>
+
+          <!-- BIKE PROFILE TAB -->
+          <div class="course-tab-content" data-tab="bike-profile">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Bike – Profile</h3>
+                <p>Understanding the elevation profile of the bike course will help you pace your effort and prepare for the climbing sections. The course begins at the transition zone (elevation 630m) and gradually ascends through the first 3km.</p>
+                <p>The most significant elevation gain occurs between km 8-15, where the road climbs steadily toward the park's ridge area. This is typically the toughest section of all bike distances. After km 15, the course descends and rolls through forested sections with variable gradient.</p>
+                <p><strong>Super Sprint Profile:</strong> Minimal elevation change, ideal for beginners and those wanting a confidence-building ride.</p>
+                <p><strong>Sprint Profile:</strong> Approximately 180m total elevation gain with manageable climbs. The final 2km returns to lower elevation with a slight downhill finish.</p>
+                <p><strong>Olympic Profile:</strong> Approximately 450m total elevation gain with extended climbing sections. Two peaks are reached during the course, with corresponding descents providing recovery opportunities.</p>
+                <p>Weather conditions can significantly impact cycling comfort. Wind exposure on higher elevation sections may be noticeable. Check the course preview video and elevation charts in your race kit.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../assets/images/maps/bike_profile.jpg" alt="Bike elevation profile">
+              </div>
+            </div>
+          </div>
+
+          <!-- RUN TAB -->
+          <div class="course-tab-content" data-tab="run">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Run</h3>
+                <p>Runners will exit the transition zone and head up Columbine and left on Ta-wa-pit for the first hill climb. For the next 2 km runners will pass by the seasonal residence cottagers cheering, keeping the focus off the hard bike and inspiring them on.</p>
+                <p>Please see the Duathlon Run Course map for the two run routes.</p>
+                <p>The Sprint runners make the turnaround at Deep Bay and head back to the finish line via Wasagaming Drive to the Lakeshore path. Olympic runners continue along the closed road for another 2 km towards the golf course before their turnaround. Shortly after the sprint turnaround runners head down to the Lakeshore path and are met by the view of the lake and some welcome shade to keep the engine cool.</p>
+                <p>With 1 km to go the trail climbs up and a vast view of Clear Lake and the sounds of the transition zone can be heard enticing them to speed up for the last push to the line. As the runners approach the end of this lakeshore path, they run into the finishing shoot inside the transition zone to the finish line where all the fun began a short time ago.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../assets/images/maps/run_route.jpg" alt="Run course map">
+              </div>
+            </div>
+          </div>
+
+          <!-- DUATHLON RUN TAB -->
+          <div class="course-tab-content" data-tab="run-super">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Run – Super Sprint & Duathlon</h3>
+                <p>The Super Sprint 2.5km run is an excellent introduction to triathlon. This distance is achievable for first-time athletes while still providing a meaningful running challenge after the swim and bike legs.</p>
+                <p>For duathlon participants (bike-run only), the 2.5km run concludes the race and serves as a final sprint to the finish. This course uses the same trail system as the triathlon distances but represents only a single loop on the primary trail.</p>
+                <p>The terrain is well-marked and relatively forgiving compared to the longer distances. One aid station is positioned at approximately the 1km mark. The final section features a gradual descent toward the finish line celebration area.</p>
+                <p>This distance is perfect for building confidence before attempting longer distances. Focus on maintaining steady effort and enjoying the experience. The scenic finish line provides excellent spectator viewing areas.</p>
+                <p>After finishing, proceed directly to the finish line area where you'll receive a finisher's medal, refreshment beverages, and access to the race festival with food vendors and celebration activities.</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../assets/images/maps/duathlon_run_route.jpg" alt="Super Sprint run course">
+              </div>
+            </div>
+          </div>
+
+          <!-- PARKING TAB -->
+          <div class="course-tab-content" data-tab="parking">
+            <div class="course-content-wrapper">
+              <div class="course-text-column">
+                <h3>Parking</h3>
+                <p>Adequate parking is available at the race venue with designated lots organized by distance and participant type. Athlete parking is located closest to the transition zone and race start area, ensuring convenient access to your bike and gear.</p>
+                <p>Spectator parking is available in separate lots with clear signage. A complimentary shuttle service operates between spectator parking and the main race festival area. Allow extra time for parking on race morning – we recommend arriving at least 90 minutes before your wave start time.</p>
+                <p><strong>Key Parking Information:</strong></p>
+                <ul style="margin: var(--spacing-md) 0; padding-left: 20px;">
+                  <li>Athlete parking opens at 5:30 AM</li>
+                  <li>Vehicle parking is limited – carpooling strongly encouraged</li>
+                  <li>Parking attendants provide direction at main entrances</li>
+                  <li>Lost vehicle hotline available day-of (provided in race kit)</li>
+                  <li>Accessible parking available (contact race director for reserved spot)</li>
+                </ul>
+                <p>After the race, a coordinated exit flow helps manage parking lot congestion. Please be patient and allow extra time to retrieve your vehicle. Thank you for your patience!</p>
+                <button class="course-larger-map-btn">LARGER MAP</button>
+              </div>
+              <div class="course-image-column">
+                <img src="../assets/images/maps/parking.jpg" alt="Parking map">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO ALBUM SECTION -->
+  <section class="section photo-album-section">
+    <h2 class="section-title">Photo Album</h2>
+    <p class="section-subtitle">Moments from past RM Triathlon events</p>
+    <div class="photo-grid">
+      <div class="photo-item">
+        <img src="../assets/images/features/feature1.jpg" alt="Athletes swimming in Clear Lake">
+        <div class="photo-overlay">
+          <p>Swim Leg</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="../assets/images/features/feature2.jpg" alt="Cyclists on the scenic bike course">
+        <div class="photo-overlay">
+          <p>Bike Course</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="../assets/images/features/feature3.jpg" alt="Runners on the mountain trail">
+        <div class="photo-overlay">
+          <p>Run Course</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="../assets/images/features/feature4.jpg" alt="Athletes crossing the finish line">
+        <div class="photo-overlay">
+          <p>Finish Line</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="../assets/images/features/feature1.jpg" alt="Award ceremony and celebrations">
+        <div class="photo-overlay">
+          <p>Awards & Celebrations</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="../assets/images/features/feature2.jpg" alt="Community atmosphere at the race">
+        <div class="photo-overlay">
+          <p>Community Spirit</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="../assets/images/features/feature3.jpg" alt="Scenic Riding Mountain landscape">
+        <div class="photo-overlay">
+          <p>Stunning Scenery</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="../assets/images/features/feature4.jpg" alt="Volunteers supporting athletes">
+        <div class="photo-overlay">
+          <p>Volunteer Support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/rm-triathlon.js"></script>
+
+  <!-- HEADER & FOOTER LOADER -->
+  <script>
+    fetch("../components/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+
+        // ✅ Initialize AFTER header exists
+        initStickyHeader();
+        initPhoneMenu();
+        
+        // ✅ Set active nav link based on current page
+        setActiveNavLink(getCurrentPageName());
+      });
+
+    fetch("../components/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

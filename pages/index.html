@@ -12,10 +12,10 @@
   <meta property="og:url" content="https://windburn.ca" />
   <meta name="theme-color" content="#57a0ce" />
   <title>Windburn Multi-Sport Academy - Competitive Triathlon Team & Programs</title>
-  <link rel="stylesheet" href="assets/css/global.css" />
-  <link rel="stylesheet" href="assets/css/index-header.css" />
-  <link rel="stylesheet" href="assets/css/footer.css" />
-  <link rel="icon" href="assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/index-header.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="icon" href="../assets/images/logos/favicon.ico" type="image/x-icon" />
   <script src="https://kit.fontawesome.com/a2d9d5f8e2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -41,11 +41,11 @@
       <p>
         Windburn Multi-Sport Academy Inc. develops athletes from their first multi-sport experience all the way up to elite competition.
         The atmosphere created for the race team is fun, friendly, and of course, competitive. This format brings together athletes of all
-        ages that are focused to succeed and support each other. Windburn Multi-Sport Academy has two training groups "Windburn Race Team" 
-        and "Windburn DEVO Team".
+        ages that are focused to succeed and support each other. Windburn Multi-Sport Academy has two training groups “Windburn Race Team” 
+        and “Windburn DEVO Team”.
       </p>
       <p>
-        Windburn's training focuses on the fundamental sports of swim, bike, run, and branches out into the variations of each. 
+        Windburn’s training focuses on the fundamental sports of swim, bike, run, and branches out into the variations of each. 
         Cross training is a staple with the Windburn Multi-Sport Academy, and you will find yourself mixing in cross country skiing,
         mountain biking, and trail running to keep your body and mind fresh during the training sessions. Athletes focusing
         on other sports (e.g., hockey, volleyball, basketball, water polo) also benefit from cross training in this environment.
@@ -54,7 +54,7 @@
       <a href="#" class="btn">Learn More About Us</a>
     </div>
     <div class="about-image">
-      <img src="assets/images/logos/logo.png" alt="Windburn Logo">
+      <img src="../assets/images/logos/logo.png" alt="Windburn Logo">
     </div>
   </section>
 
@@ -62,7 +62,7 @@
 <section class="feature feature1">
   <div class="feature-content">
     <h2>
-      First athlete to "T1" gets dibs<br>
+      First athlete to “T1” gets dibs<br>
       on the best bike right!<br>
       <span>So swim hard!</span>
     </h2>
@@ -87,25 +87,25 @@
 
   <div class="team-right">
     <div class="team-feature">
-      <img src="assets/images/logos/header_logo.png" alt="">
+      <img src="../assets/images/logos/header_logo.png" alt="">
       <h4>Competitive Athletes</h4>
       <p>Over forty highly competitive athletes training year-round.</p>
     </div>
 
     <div class="team-feature">
-      <img src="assets/images/logos/header_logo.png" alt="">
+      <img src="../assets/images/logos/header_logo.png" alt="">
       <h4>Individualized Programs</h4>
       <p>Designed and implemented by Head Coach Dave Lipchen.</p>
     </div>
 
     <div class="team-feature">
-      <img src="assets/images/logos/header_logo.png" alt="">
+      <img src="../assets/images/logos/header_logo.png" alt="">
       <h4>Team Trains Together</h4>
       <p>Structured group training 8–20 hours per week.</p>
     </div>
 
     <div class="team-feature">
-      <img src="assets/images/logos/header_logo.png" alt="">
+      <img src="../assets/images/logos/header_logo.png" alt="">
       <h4>Holistic Environment</h4>
       <p>Support from experts across multiple disciplines.</p>
     </div>
@@ -118,7 +118,7 @@
     <h2>
       How hard could a flying mount be?<br>
       I saw it on T.V.!!!<br>
-      <span>"I mean YouTube…"</span>
+      <span>“I mean YouTube…”</span>
     </h2>
 
     <a href="#" class="btn feature-btn">Start Training Today</a>
@@ -128,7 +128,7 @@
 <!-- DEVO SECTION -->
 <section class="devo section">
   <div class="devo-left">
-    <img src="assets/images/logos/devo_logo.png" alt="Windburn Devo Team Logo">
+    <img src="../assets/images/logos/devo_logo.png" alt="Windburn Devo Team Logo">
   </div>
 
   <div class="devo-right">
@@ -145,7 +145,7 @@
       Athletes participating in other sports benefit from cross training, improving
       endurance, muscle balance, and injury prevention.
     </p>
-    <a href="pages/sub-pages/devo_team.html" class="btn">Explore the DEVO Team</a>
+    <a href="sub-pages/devo_team.html" class="btn">Explore the DEVO Team</a>
   </div>
 </section>
 
@@ -153,8 +153,8 @@
 <section class="feature feature3">
   <div class="feature-content">
     <h2>
-      "If you can't beat 'em, make 'em PUKE!!!"<br>
-      "And there is food at the end"
+      “If you can’t beat ’em, make ’em PUKE!!!”<br>
+      “And there is food at the end”
     </h2>
 
     <a href="#" class="btn feature-btn">Start Training Today</a>
@@ -168,12 +168,12 @@
   <div id="footer-placeholder"></div>
 
   <!-- SCRIPTS -->
-  <script src="assets/js/global.js"></script>
-  <script src="assets/js/header.js"></script>
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/header.js"></script>
 
   <!-- HEADER & FOOTER LOADER -->
   <script>
-    fetch("components/header.html")
+    fetch("../components/header.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("header-placeholder").innerHTML = data;
@@ -186,13 +186,13 @@
         setActiveNavLink(getCurrentPageName());
       });
 
-    fetch("components/footer.html")
+    fetch("../components/footer.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("footer-placeholder").innerHTML = data;
       });
 
-    fetch("components/partners.html")
+    fetch("../components/partners.html")
       .then(res => res.text())
       .then(data => {
         document.getElementById("partners-placeholder").innerHTML = data;

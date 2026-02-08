@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Press & Awards - Windburn Multi-Sport Academy achievements, media coverage, and recognition in the triathlon community." />
+  <meta name="keywords" content="windburn awards, triathlon achievements, press coverage, team recognition" />
+  <meta property="og:title" content="Press & Awards - Windburn Multi-Sport Academy" />
+  <meta property="og:description" content="Celebrating Windburn's achievements and media recognition in competitive triathlon." />
+  <meta property="og:type" content="website" />
+  <title>Press & Awards - Windburn Multi-Sport Academy</title>
+  <link rel="stylesheet" href="../styles/global.css" />
+  <link rel="stylesheet" href="../components/header/header.css" />
+  <link rel="stylesheet" href="../components/footer/footer.css" />
+  <link rel="icon" href="../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/a2d9d5f8e2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <h1>Press & Awards</h1>
+      <p class="page-hero__subtitle">Celebrating the achievements, recognition, and media coverage of Windburn Multi-Sport Academy and our athletes in the competitive triathlon community.</p>
+    </div>
+  </section>
+
+  <!-- AWARDS SECTION -->
+  <section class="section awards-section">
+    <h2 class="section-heading">Team Awards & Recognition</h2>
+
+    <div class="award-item">
+      <span class="award-year">2025</span>
+      <h3>Excellence in Youth Development</h3>
+      <p>Recognized by Triathlon Manitoba for outstanding contribution to youth athlete development and mentorship programs.</p>
+    </div>
+
+    <div class="award-item">
+      <span class="award-year">2024</span>
+      <h3>Team of the Year - Manitoba Triathlon</h3>
+      <p>Honored as the leading competitive triathlon team in Manitoba for consistent performance and community involvement.</p>
+    </div>
+
+    <div class="award-item">
+      <span class="award-year">2024</span>
+      <h3>Community Excellence Award</h3>
+      <p>Awarded for dedication to fostering a welcoming, inclusive triathlon community and supporting local athletes at all levels.</p>
+    </div>
+
+    <div class="award-item">
+      <span class="award-year">2023</span>
+      <h3>Coaching Excellence Recognition</h3>
+      <p>Head Coach Dave Lipchen recognized for innovative coaching methodology and athlete development programs.</p>
+    </div>
+
+    <div class="award-item">
+      <span class="award-year">2023</span>
+      <h3>Partner Organization Award</h3>
+      <p>Celebrated for outstanding partnership and collaboration with local businesses and sports organizations.</p>
+    </div>
+  </section>
+
+  <!-- MEDIA COVERAGE SECTION -->
+  <section class="section">
+    <h2 class="section-heading">Media Coverage</h2>
+    <p>Windburn Multi-Sport Academy has been featured in leading sports media and local publications. Our athletes and programs have gained recognition for their competitive excellence and community impact.</p>
+
+    <div class="media-grid">
+      <div class="media-card">
+        <i class="fas fa-newspaper"></i>
+        <h4>Local News Features</h4>
+        <p>Coverage of team achievements and athlete stories in Manitoba media outlets</p>
+      </div>
+
+      <div class="media-card">
+        <i class="fas fa-broadcast-tower"></i>
+        <h4>Sports Broadcasting</h4>
+        <p>Featured interviews and race coverage on regional sports networks</p>
+      </div>
+
+      <div class="media-card">
+        <i class="fas fa-book-open"></i>
+        <h4>Magazine Articles</h4>
+        <p>In-depth features in triathlon and sports lifestyle publications</p>
+      </div>
+
+      <div class="media-card">
+        <i class="fas fa-globe"></i>
+        <h4>Online Publications</h4>
+        <p>Articles and press releases on sports news websites and blogs</p>
+      </div>
+
+      <div class="media-card">
+        <i class="fas fa-video"></i>
+        <h4>Video Features</h4>
+        <p>Documentary-style content showcasing athlete training and achievements</p>
+      </div>
+
+      <div class="media-card">
+        <i class="fas fa-image"></i>
+        <h4>Photo Features</h4>
+        <p>High-quality imagery from races and training sessions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATHLETE ACHIEVEMENTS -->
+  <section class="section newsletter-section">
+    <h2 class="section-heading section-heading--center">Athlete Achievements</h2>
+
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-item__number">40+</div>
+        <div class="stat-item__label">Competitive Athletes</div>
+        <div class="stat-item__sublabel">Training Year-Round</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-item__number stat-item__number--alt">100+</div>
+        <div class="stat-item__label">Podium Finishes</div>
+        <div class="stat-item__sublabel">National Competitions</div>
+      </div>
+
+      <div class="stat-item">
+        <div class="stat-item__number">50+</div>
+        <div class="stat-item__label">Personal Records</div>
+        <div class="stat-item__sublabel">Achieved Annually</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESS INQUIRIES -->
+  <section class="section contact-cta">
+    <h2>Press Inquiries</h2>
+    <p>For media inquiries, interview requests, or press releases, please contact us:</p>
+    <div class="flex-center gap-lg" style="flex-wrap: wrap;">
+      <a href="mailto:press@windburn.ca" class="btn btn--no-margin">Email Press Team</a>
+      <a href="tel:+12041234567" class="btn btn--ghost btn--no-margin">Call Us</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../styles/global.js"></script>
+  <script src="../components/header/header.js"></script>
+
+  <!-- HEADER & FOOTER LOADER -->
+  <script>
+    fetch("../components/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+        setActiveNavLink(getCurrentPageName());
+      });
+
+    fetch("../components/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

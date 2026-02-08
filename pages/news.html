@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Latest news, updates, and announcements from Windburn Multi-Sport Academy. Stay informed about races, training, and team achievements." />
+  <meta name="keywords" content="windburn news, triathlon updates, academy announcements, race results" />
+  <meta property="og:title" content="News - Windburn Multi-Sport Academy" />
+  <meta property="og:description" content="Latest news and updates from Windburn Multi-Sport Academy." />
+  <meta property="og:type" content="website" />
+  <title>News - Windburn Multi-Sport Academy</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="icon" href="../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <script src="https://kit.fontawesome.com/a2d9d5f8e2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div id="header-placeholder"></div>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <h1>News & Updates</h1>
+      <p class="page-hero__subtitle">Stay informed with the latest news from Windburn Multi-Sport Academy. Discover race results, team highlights, training updates, and announcements.</p>
+    </div>
+  </section>
+
+  <!-- NEWS GRID -->
+  <section class="section">
+    <div id="news-grid" class="news-grid">
+      <!-- News items will be loaded here dynamically -->
+      <div style="text-align: center; padding: 2rem; grid-column: 1 / -1;">
+        <p>Loading news articles...</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER SIGNUP -->
+  <section class="section newsletter-section">
+    <div class="newsletter-content">
+      <h2>Stay Updated</h2>
+      <p>Subscribe to our newsletter for exclusive updates, training tips, and event announcements.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <div id="footer-placeholder"></div>
+
+  <!-- SCRIPTS -->
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/header.js"></script>
+
+  <!-- NEWS LOADING SCRIPT -->
+  <script>
+    const NEWS_DATA_URL = "../../data/news.json";
+
+    async function loadNews() {
+      const newsGrid = document.getElementById('news-grid');
+
+      try {
+        const response = await fetch(NEWS_DATA_URL, { cache: "no-cache" });
+        if (!response.ok) throw new Error('Failed to fetch news');
+
+        const newsArticles = await response.json();
+
+        if (newsArticles.length === 0) {
+          newsGrid.innerHTML = '<p style="text-align: center; grid-column: 1 / -1;">No news articles available.</p>';
+          return;
+        }
+
+        newsGrid.innerHTML = newsArticles.map(article => `
+          <article class="news-card">
+            <div class="news-date">
+              <span class="news-month">${article.month}</span>
+              <span class="news-day">${article.day}</span>
+            </div>
+            <div class="news-content">
+              <h3>${article.title}</h3>
+              <p class="news-excerpt">${article.excerpt}</p>
+              <a href="${article.link}" class="news-link">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </article>
+        `).join('');
+      } catch (err) {
+        newsGrid.innerHTML = `
+          <div style="text-align: center; padding: 2rem; grid-column: 1 / -1;">
+            <p style="color: #666;">Unable to load news articles at the moment.</p>
+            <p style="color: #999; font-size: 0.9rem;">Make sure data/news.json is accessible.</p>
+          </div>
+        `;
+        console.error('News loading error:', err);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', loadNews);
+  </script>
+
+  <!-- HEADER & FOOTER LOADER -->
+  <script>
+    fetch("../components/header.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+        setActiveNavLink(getCurrentPageName());
+      });
+
+    fetch("../components/footer.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
