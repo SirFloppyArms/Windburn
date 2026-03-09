@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "month": "Mar",
+    "day": 7,
+    "title": "2026 RM Triathlon Registration Is Open",
+    "excerpt": "Registration is now open for Super Sprint, Sprint, and Olympic distances. Early pricing is available for a limited time.",
+    "link": "sub-pages/register.html"
+  },
+  {
+    "id": 2,
+    "month": "Feb",
+    "day": 18,
+    "title": "Windburn Winter Training Block Highlights",
+    "excerpt": "Athletes completed the winter block with strong swim progress, improved bike power, and run consistency across all squads.",
+    "link": "windburn-race-team.html"
+  },
+  {
+    "id": 3,
+    "month": "Jan",
+    "day": 29,
+    "title": "Coach Team Update for 2026",
+    "excerpt": "Meet the expanded coaching support team and review each coach's discipline focus ahead of the upcoming race season.",
+    "link": "sub-pages/coaches.html"
+  }
+]

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Accessibility statement for Windburn Multi-Sport Academy website." />
+  <title>Accessibility - Windburn Multi-Sport Academy</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="icon" href="../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <h1>Accessibility</h1>
+      <p class="page-hero__subtitle">Our commitment to an inclusive website experience.</p>
+    </div>
+  </section>
+
+  <main class="section" id="main-content" style="max-width: 900px; margin: 0 auto;">
+    <h2>Commitment</h2>
+    <p>Windburn Multi-Sport Academy is committed to improving website accessibility for all visitors, including those using assistive technologies.</p>
+
+    <h2>Current Practices</h2>
+    <p>We work to maintain semantic structure, keyboard-friendly navigation, text alternatives for images, and readable contrast in core page templates.</p>
+
+    <h2>Feedback</h2>
+    <p>If you experience accessibility barriers, email <a href="mailto:info@windburnraceteam.com">info@windburnraceteam.com</a> with page details so we can address the issue quickly.</p>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/header.js"></script>
+  <script>
+    fetch("../components/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+      });
+
+    fetch("../components/footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

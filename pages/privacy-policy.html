@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Privacy policy for Windburn Multi-Sport Academy website." />
+  <title>Privacy Policy - Windburn Multi-Sport Academy</title>
+  <link rel="stylesheet" href="../assets/css/global.css" />
+  <link rel="stylesheet" href="../assets/css/header.css" />
+  <link rel="stylesheet" href="../assets/css/footer.css" />
+  <link rel="icon" href="../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <h1>Privacy Policy</h1>
+      <p class="page-hero__subtitle">How we collect, use, and protect website information.</p>
+    </div>
+  </section>
+
+  <main class="section" id="main-content" style="max-width: 900px; margin: 0 auto;">
+    <h2>Information We Receive</h2>
+    <p>When you contact us or submit a form, we may receive your name, email address, and any message content you provide.</p>
+
+    <h2>How Information Is Used</h2>
+    <p>We use submitted information only to respond to inquiries, share requested race or program details, and improve communications.</p>
+
+    <h2>Data Sharing</h2>
+    <p>We do not sell personal information. Information may be shared with service providers only when required to operate communications or event registration workflows.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy can be sent to <a href="mailto:info@windburnraceteam.com">info@windburnraceteam.com</a>.</p>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../assets/js/global.js"></script>
+  <script src="../assets/js/header.js"></script>
+  <script>
+    fetch("../components/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+      });
+
+    fetch("../components/footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

@@ -59,26 +59,34 @@ function initFAQs() {
     header.addEventListener('click', function() {
       const faqItem = this.closest('.faq-item');
       const faqContent = faqItem.querySelector('.faq-content');
-      
+
       // Close all other FAQs
       document.querySelectorAll('.faq-item').forEach(item => {
         if (item !== faqItem) {
           item.classList.remove('active');
-          item.querySelector('.faq-content').style.display = 'none';
+          const itemHeader = item.querySelector('.faq-header');
+          const itemContent = item.querySelector('.faq-content');
+          itemHeader?.setAttribute('aria-expanded', 'false');
+          itemContent.style.display = 'none';
+          itemContent.setAttribute('aria-hidden', 'true');
         }
       });
 
       // Toggle current FAQ
       faqItem.classList.toggle('active');
-      
+
       if (faqItem.classList.contains('active')) {
+        this.setAttribute('aria-expanded', 'true');
         faqContent.style.display = 'block';
+        faqContent.setAttribute('aria-hidden', 'false');
         // Smooth scroll to FAQ
         setTimeout(() => {
           faqItem.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         }, 100);
       } else {
+        this.setAttribute('aria-expanded', 'false');
         faqContent.style.display = 'none';
+        faqContent.setAttribute('aria-hidden', 'true');
       }
     });
   });
