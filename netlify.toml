@@ -1,0 +1,124 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=600"
+
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/windburn-race-team"
+  to = "/pages/windburn-race-team.html"
+  status = 301
+
+[[redirects]]
+  from = "/windburn-race-team/our-coaches"
+  to = "/pages/sub-pages/coaches.html"
+  status = 301
+
+[[redirects]]
+  from = "/windburn-race-team/devo-team"
+  to = "/pages/sub-pages/devo_team.html"
+  status = 301
+
+[[redirects]]
+  from = "/windburn-race-team/training-schedule"
+  to = "/pages/sub-pages/training-schedule.html"
+  status = 301
+
+[[redirects]]
+  from = "/windburn-race-team/training-videos"
+  to = "/pages/sub-pages/training-videos.html"
+  status = 301
+
+[[redirects]]
+  from = "/riding-mountain-triathlon"
+  to = "/pages/rm-triathlon.html"
+  status = 301
+
+[[redirects]]
+  from = "/riding-mountain-triathlon/accommodations"
+  to = "/pages/rm-triathlon/accommodations.html"
+  status = 301
+
+[[redirects]]
+  from = "/riding-mountain-triathlon/registration/triathlon-duathlon"
+  to = "/pages/rm-triathlon/registration.html"
+  status = 301
+
+[[redirects]]
+  from = "/riding-mountain-triathlon/results-awards"
+  to = "/pages/rm-triathlon/results-awards.html"
+  status = 301
+
+[[redirects]]
+  from = "/riding-mountain-triathlon/volunteers"
+  to = "/pages/rm-triathlon/volunteers.html"
+  status = 301
+
+[[redirects]]
+  from = "/riding-mountain-triathlon/race-gear"
+  to = "/pages/rm-triathlon/race-gear.html"
+  status = 301
+
+[[redirects]]
+  from = "/news"
+  to = "/pages/news.html"
+  status = 301
+
+[[redirects]]
+  from = "/press-awards"
+  to = "/pages/press-awards.html"
+  status = 301
+
+[[redirects]]
+  from = "/news/10-follow-us-on-social-media"
+  to = "/pages/news-posts/follow-us-on-social-media.html"
+  status = 301
+
+[[redirects]]
+  from = "/news/32-new-website"
+  to = "/pages/news-posts/new-website.html"
+  status = 301
+
+[[redirects]]
+  from = "/news/33-registration-is-now-open-for-2018"
+  to = "/pages/news-posts/registration-is-now-open-for-2018.html"
+  status = 301
+
+[[redirects]]
+  from = "/news/34-lipchin-taking-over-triathlon"
+  to = "/pages/news-posts/lipchin-taking-over-triathlon.html"
+  status = 301
+
+[[redirects]]
+  from = "/news/40-tyler-mislawchuk"
+  to = "/pages/news-posts/tyler-mislawchuk.html"
+  status = 301
+
+[[redirects]]
+  from = "/news/44-congratulations-to-triathlon-coach-dave-lipchen"
+  to = "/pages/news-posts/congratulations-to-triathlon-coach-dave-lipchen.html"
+  status = 301

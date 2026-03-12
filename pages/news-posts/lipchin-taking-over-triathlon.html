@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Archive feature about Dave Lipchen taking over Riding Mountain Triathlon, paraphrased from the original coverage." />
+  <meta property="og:title" content="Lipchin Taking Over Triathlon - Windburn News" />
+  <meta property="og:description" content="Archive feature summarizing the leadership transition for Riding Mountain Triathlon." />
+  <meta property="og:type" content="article" />
+  <title>Lipchin Taking Over Triathlon - Windburn News</title>
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/header.css" />
+  <link rel="stylesheet" href="../../assets/css/footer.css" />
+  <link rel="stylesheet" href="../../assets/css/content-pages.css" />
+  <link rel="icon" href="../../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__content content-shell--narrow">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="../news.html">News</a>
+        <span>/</span>
+        <span>Lipchin Taking Over Triathlon</span>
+      </div>
+      <span class="page-hero__eyebrow">News Archive</span>
+      <h1>Lipchin Taking Over Triathlon</h1>
+      <p class="page-hero__subtitle">A paraphrased archive summary of the Brandon Sun story about the transition of Riding Mountain Triathlon leadership.</p>
+    </div>
+  </section>
+
+  <main class="content-shell content-shell--narrow content-stack">
+    <article class="article-body">
+      <div class="article-meta">
+        <span>April 27, 2018</span>
+        <span>Source Summary: Brandon Sun reporting</span>
+      </div>
+      <p>The original article covered the transition of Riding Mountain Triathlon from longtime organizers Ellis and Deb Crowston to Dave Lipchen. The core message was that the event had reached a point where fresh leadership and a more professional growth path were needed.</p>
+      <p>The story emphasized Lipchen’s deep background in the sport: years as an athlete, international representation, leadership in Manitoba youth development, and his role with Windburn Multi-Sport Academy. Those details positioned him as someone capable of protecting the race’s legacy while pushing it into a stronger next phase.</p>
+      <p>The article also explained why the event matters so much. Riding Mountain Triathlon was described not just as a one-day race, but as a full weekend experience that athletes and families plan around. That event atmosphere, combined with the park setting, was one of the strongest reasons the handoff mattered.</p>
+      <blockquote>Riding Mountain was presented as an event with enough momentum, tradition, and community support to justify a bigger long-term vision, provided the next organizer respected what had already been built.</blockquote>
+      <p>The legacy coverage made clear that the outgoing organizers had rebuilt the race’s reputation over time, and that the expectation for the next era was not just to maintain standards, but to keep growing the event thoughtfully.</p>
+      <p><a href="https://www.brandonsun.com/sports/local/lipchin-taking-over-triathlon-480440633.html" target="_blank" rel="noopener">Read the original Brandon Sun article</a></p>
+      <div class="article-nav">
+        <a href="registration-is-now-open-for-2018.html">Previous Article</a>
+        <a href="tyler-mislawchuk.html">Next Article</a>
+      </div>
+    </article>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../../assets/js/global.js"></script>
+  <script src="../../assets/js/header.js"></script>
+  <script>
+    fetch("../../components/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+        setActiveNavLink("news");
+      });
+
+    fetch("../../components/footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

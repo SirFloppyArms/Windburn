@@ -37,6 +37,7 @@ windburn/
 │   ├── header.html       # Site navigation header
 │   ├── footer.html       # Footer with links
 │   └── partners.html     # Partners section
+├── package.json           # Optional cross-device live-reload dev tooling
 └── README.md              # This file
 ```
 
@@ -55,6 +56,45 @@ python3 -m http.server 8000
 
 # Then visit: http://localhost:8000
 ```
+
+### Cross-Device Live Testing (Phone/Tablet)
+
+If you want live updates on devices other than your computer, use `browser-sync`.
+
+```bash
+# 1) Install dev tool once
+npm install
+
+# 2) Start live-reload server on your LAN
+npm run dev
+```
+
+`browser-sync` will print URLs like:
+
+- `Local: http://localhost:3000`
+- `External: http://192.168.x.x:3000`
+
+Open the `External` URL on any device connected to the same Wi-Fi/network. Changes to HTML/CSS/JS will auto-reload across connected devices.
+
+Helpful macOS command to get your LAN IP:
+
+```bash
+ipconfig getifaddr en0 || ipconfig getifaddr en1
+```
+
+### Remote Device Testing (Outside Your Network)
+
+For devices not on your Wi-Fi, expose your local server with a secure tunnel:
+
+```bash
+# In one terminal
+npm run dev
+
+# In a second terminal (if cloudflared is installed)
+cloudflared tunnel --url http://localhost:3000
+```
+
+Use the generated `https://...trycloudflare.com` URL on remote devices.
 
 ### Editing Content
 
@@ -226,6 +266,7 @@ Update these in each HTML file's `<head>` section.
 | Navigation broken | Update links in `components/header.html` and `footer.html` |
 | Page not found on deploy | Ensure all files are committed to git, check GitHub Pages settings |
 | Font issues | Check if external fonts (FontAwesome) are loading |
+| Phone cannot open local test URL | Confirm both devices are on same network, allow incoming connections in macOS firewall, and use the `External` BrowserSync URL |
 
 ## Tools & Resources
 

@@ -358,6 +358,41 @@
   box-shadow: var(--shadow-md);
 }
 
+/* ===============================
+   RESOURCE LINKS
+================================ */
+.rm-resource-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.rm-resource-card {
+  display: block;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 18px;
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.rm-resource-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-color);
+}
+
+.rm-resource-card h3 {
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.rm-resource-card p {
+  margin-bottom: 0;
+  color: var(--text-dark);
+}
+
 .quote-text {
   font-size: 1.05rem;
   font-style: italic;

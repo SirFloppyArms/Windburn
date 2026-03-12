@@ -1,0 +1,13 @@
+{
+  "name": "windburn-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local development helpers for the Windburn static site",
+  "scripts": {
+    "dev": "browser-sync start --server --files \"**/*.html, assets/css/**/*.css, assets/js/**/*.js, data/**/*.json\" --port 3000 --no-open",
+    "dev:local": "browser-sync start --server --files \"**/*.html, assets/css/**/*.css, assets/js/**/*.js, data/**/*.json\" --host localhost --port 3000 --no-open"
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.3"
+  }
+}

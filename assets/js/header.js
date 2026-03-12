@@ -1,6 +1,4 @@
 function initStickyHeader() {
-  if (window.innerWidth <= 950) return;
-
   const header = document.querySelector(".header-bottom");
   if (!header) return;
 
@@ -89,6 +87,12 @@ function initStickyHeader() {
   ================================ */
   calculateStickyTrigger();
   update();
+
+  // Re-measure once full page assets are loaded (hero images/fonts can shift layout).
+  window.addEventListener("load", () => {
+    calculateStickyTrigger();
+    update();
+  });
 
   window.addEventListener("scroll", update, { passive: true });
   window.addEventListener("resize", onResize);

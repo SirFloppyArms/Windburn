@@ -12,7 +12,6 @@
 
 # Node (if using any node-based tools)
 node_modules/
-package-lock.json
 
 # Dependencies
 dist/

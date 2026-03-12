@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A curated training and racing media page for Windburn Race Team with video themes, social channels, and coaching resources." />
+  <meta property="og:title" content="Training Videos - Windburn Race Team" />
+  <meta property="og:description" content="Explore Windburn training themes, racing highlights, and the channels where team media is shared." />
+  <meta property="og:type" content="website" />
+  <title>Training Videos - Windburn Race Team</title>
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/header.css" />
+  <link rel="stylesheet" href="../../assets/css/footer.css" />
+  <link rel="stylesheet" href="../../assets/css/content-pages.css" />
+  <link rel="icon" href="../../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="../windburn-race-team.html">Race Team</a>
+        <span>/</span>
+        <span>Training Videos</span>
+      </div>
+      <span class="page-hero__eyebrow">Race Team Media</span>
+      <h1>Training and Racing Videos</h1>
+      <p class="page-hero__subtitle">The live site’s video page was mostly a media showcase. This version keeps that purpose, but organizes it into clear categories so athletes and parents can quickly understand what kind of footage and training examples Windburn shares.</p>
+    </div>
+  </section>
+
+  <main class="content-shell content-stack">
+    <section class="content-rich">
+      <h2>What You Will Find Here</h2>
+      <p>Windburn media is useful for more than hype. Training clips help athletes understand technical cues, pacing, race execution, and the team environment. This page acts as a clean hub for the same intent as the old site, with clearer guidance on where to find current footage.</p>
+    </section>
+
+    <section class="media-grid">
+      <article class="media-card">
+        <img src="../../assets/images/features/feature1.jpg" alt="Swim-focused training content" />
+        <div class="media-card__body">
+          <h3>Swim Skills</h3>
+          <p>Stroke drills, open-water confidence work, starts, sighting, and pool-to-race technique progression.</p>
+        </div>
+      </article>
+      <article class="media-card">
+        <img src="../../assets/images/features/feature2.jpg" alt="Bike training content" />
+        <div class="media-card__body">
+          <h3>Bike Sessions</h3>
+          <p>Indoor trainer sessions, cadence work, cornering cues, and race-day bike handling reminders.</p>
+        </div>
+      </article>
+      <article class="media-card">
+        <img src="../../assets/images/features/feature3.jpg" alt="Run and transition training content" />
+        <div class="media-card__body">
+          <h3>Run and Transition</h3>
+          <p>Stride mechanics, brick sessions, transition setup, and race execution examples.</p>
+        </div>
+      </article>
+      <article class="media-card">
+        <img src="../../assets/images/features/feature4.jpg" alt="Race-day team highlight content" />
+        <div class="media-card__body">
+          <h3>Race Highlights</h3>
+          <p>Team clips from competitions, camp weekends, and milestone performances across the season.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="split-layout">
+      <div class="info-card">
+        <h2>Where Current Media Is Shared</h2>
+        <p>The legacy page functioned like a simple highlight page. In practice, the most current video material is usually shared through direct coach communication and social channels.</p>
+        <ul>
+          <li>Instagram for short race and training highlights</li>
+          <li>Facebook for community updates and media posts</li>
+          <li>Coach-directed sharing for session-specific review clips</li>
+        </ul>
+        <div class="cta-row">
+          <a href="https://www.instagram.com/team_windburn/?hl=en" target="_blank" rel="noopener">Follow on Instagram</a>
+          <a href="https://www.facebook.com/RaceWindburn/" target="_blank" rel="noopener">Follow on Facebook</a>
+        </div>
+      </div>
+      <aside class="callout">
+        <h3>Best Use for Athletes</h3>
+        <ul>
+          <li>Review drills before practice.</li>
+          <li>Study transitions before race weekends.</li>
+          <li>Use highlight footage to learn pacing and positioning.</li>
+          <li>Ask your coach which clips matter most for your current block.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <h3>For New Athletes</h3>
+        <p>Start with clips that explain warm-ups, transition setup, and simple race execution. Those have the highest immediate value.</p>
+      </article>
+      <article class="info-card">
+        <h3>For DEVO Athletes</h3>
+        <p>Look for skill-based media: mounts, dismounts, basic bike handling, open-water comfort, and smooth transitions.</p>
+      </article>
+      <article class="info-card">
+        <h3>For Competitive Athletes</h3>
+        <p>Use media review as a supplement to coaching feedback, especially for mechanics, pacing decisions, and race execution details.</p>
+      </article>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../../assets/js/global.js"></script>
+  <script src="../../assets/js/header.js"></script>
+  <script>
+    fetch("../../components/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+        setActiveNavLink("windburn-race-team");
+      });
+
+    fetch("../../components/footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

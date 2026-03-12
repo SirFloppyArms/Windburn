@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Volunteer information for Riding Mountain Triathlon, including common roles, event support needs, and how to get involved." />
+  <meta property="og:title" content="Volunteers - RM Triathlon" />
+  <meta property="og:description" content="Learn how to support Riding Mountain Triathlon as part of the volunteer crew." />
+  <meta property="og:type" content="website" />
+  <title>Volunteers - RM Triathlon</title>
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/index-header.css" />
+  <link rel="stylesheet" href="../../assets/css/footer.css" />
+  <link rel="stylesheet" href="../../assets/css/content-pages.css" />
+  <link rel="icon" href="../../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="../rm-triathlon.html">RM Triathlon</a>
+        <span>/</span>
+        <span>Volunteers</span>
+      </div>
+      <span class="page-hero__eyebrow">Event Support</span>
+      <h1>Volunteers</h1>
+      <p class="page-hero__subtitle">The legacy site correctly emphasized that the event depends on volunteers. This page keeps that message and makes the role breakdown easier to understand for first-time volunteers.</p>
+    </div>
+  </section>
+
+  <main class="content-shell content-stack">
+    <section class="split-layout">
+      <div class="content-rich">
+        <h2>The Backbone of the Event</h2>
+        <p>Riding Mountain Triathlon relies on a strong volunteer crew every year. From setup and registration to course safety and awards support, volunteers make the athlete experience possible and help create the welcoming atmosphere that racers remember.</p>
+        <p>If you want to support an athlete, give back to the community, or just be part of race weekend, volunteering is one of the most direct ways to help.</p>
+      </div>
+      <aside class="callout">
+        <h3>Why Volunteer?</h3>
+        <ul>
+          <li>Support a major Manitoba endurance event.</li>
+          <li>Be part of the race atmosphere without racing.</li>
+          <li>Help keep athletes safe and informed.</li>
+          <li>Connect with the triathlon community.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <h3>Pre-Race Setup</h3>
+        <ul>
+          <li>Set up transition area on Friday.</li>
+          <li>Install bike and run course signage.</li>
+          <li>Help prepare athlete-flow areas and support zones.</li>
+        </ul>
+      </article>
+      <article class="info-card">
+        <h3>Race-Day Registration</h3>
+        <ul>
+          <li>Body marking</li>
+          <li>Athlete check-in support</li>
+          <li>Food table support</li>
+          <li>Cleanup and takedown assistance</li>
+          <li>Awards and prize support</li>
+        </ul>
+      </article>
+      <article class="info-card">
+        <h3>Swim Support</h3>
+        <ul>
+          <li>Kayak or boat support</li>
+          <li>Swimmer marshaling at entry and exit points</li>
+          <li>Directional guidance in coordination with race officials</li>
+        </ul>
+      </article>
+      <article class="info-card">
+        <h3>Bike Course Support</h3>
+        <ul>
+          <li>Course marshaling</li>
+          <li>Traffic and turn awareness support</li>
+          <li>Delivery or roaming assistance vehicles</li>
+          <li>Motorcycle support when available</li>
+        </ul>
+      </article>
+      <article class="info-card">
+        <h3>Run Course Support</h3>
+        <ul>
+          <li>Course marshaling</li>
+          <li>Aid support and logistics help</li>
+          <li>Directional and safety support on course</li>
+        </ul>
+      </article>
+      <article class="info-card">
+        <h3>General Event Help</h3>
+        <ul>
+          <li>Transition monitoring</li>
+          <li>Post-race cleanup</li>
+          <li>Recycling and site reset</li>
+          <li>Family and spectator information support</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>Volunteer Contact</h2>
+      <p>If you want to help during race weekend, contact the team at <a href="mailto:info@windburnraceteam.com">info@windburnraceteam.com</a>. Include your availability, whether you prefer pre-race or race-day support, and whether you have experience with watercraft, course marshaling, or athlete services.</p>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../../assets/js/global.js"></script>
+  <script src="../../assets/js/header.js"></script>
+  <script>
+    fetch("../../components/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+        setActiveNavLink("rm-triathlon");
+      });
+
+    fetch("../../components/footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

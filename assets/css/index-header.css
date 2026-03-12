@@ -372,6 +372,12 @@
    STATE SWITCH
 ================================ */
 @media (max-width: 950px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
   .header-desktop {
     display: none;
   }

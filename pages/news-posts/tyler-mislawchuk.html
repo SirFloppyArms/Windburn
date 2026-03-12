@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Archive profile of Tyler Mislawchuk and his connection to Manitoba triathlon, paraphrased from the legacy site." />
+  <meta property="og:title" content="Tyler Mislawchuk - Windburn News" />
+  <meta property="og:description" content="Archive athlete profile highlighting Tyler Mislawchuk’s development and career progress." />
+  <meta property="og:type" content="article" />
+  <title>Tyler Mislawchuk - Windburn News</title>
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/header.css" />
+  <link rel="stylesheet" href="../../assets/css/footer.css" />
+  <link rel="stylesheet" href="../../assets/css/content-pages.css" />
+  <link rel="icon" href="../../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__content content-shell--narrow">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="../news.html">News</a>
+        <span>/</span>
+        <span>Tyler Mislawchuk</span>
+      </div>
+      <span class="page-hero__eyebrow">News Archive</span>
+      <h1>Tyler Mislawchuk</h1>
+      <p class="page-hero__subtitle">A paraphrased profile drawn from the legacy site’s athlete feature.</p>
+    </div>
+  </section>
+
+  <main class="content-shell content-shell--narrow content-stack">
+    <article class="article-body">
+      <div class="article-meta">
+        <span>May 14, 2019</span>
+        <span>Source Summary: Triathlon Canada profile</span>
+      </div>
+      <p>The original post highlighted Tyler Mislawchuk’s progression from a Manitoba athlete using triathlon as cross-training into one of Canada’s top elite competitors. It framed his story as an example of how early encouragement, structured coaching, and long-term commitment can change an athlete’s path.</p>
+      <p>The piece connected his development to Manitoba’s triathlon system and noted that Coach Dave Lipchen was among the people who helped guide him early in that journey. From there, Tyler progressed into national-team environments and international racing.</p>
+      <p>The legacy article also pointed to several major accomplishments from that period, including World Triathlon Series success, World Cup podium results, and Olympic representation. In other words, it was both a profile and a proof point for what strong athlete development can produce.</p>
+      <p><a href="https://www.triathloncanada.com/canadas-national-team/" target="_blank" rel="noopener">See Triathlon Canada national team information</a></p>
+      <div class="article-nav">
+        <a href="lipchin-taking-over-triathlon.html">Previous Article</a>
+        <a href="congratulations-to-triathlon-coach-dave-lipchen.html">Next Article</a>
+      </div>
+    </article>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../../assets/js/global.js"></script>
+  <script src="../../assets/js/header.js"></script>
+  <script>
+    fetch("../../components/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+        setActiveNavLink("news");
+      });
+
+    fetch("../../components/footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

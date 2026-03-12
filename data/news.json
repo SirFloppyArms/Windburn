@@ -22,5 +22,53 @@
     "title": "Coach Team Update for 2026",
     "excerpt": "Meet the expanded coaching support team and review each coach's discipline focus ahead of the upcoming race season.",
     "link": "sub-pages/coaches.html"
+  },
+  {
+    "id": 4,
+    "month": "Apr",
+    "day": 6,
+    "title": "Congratulations to Triathlon Coach Dave Lipchen",
+    "excerpt": "Archive recognition of Dave Lipchen receiving the Dr. Jack Hunt Memorial Award for his coaching impact.",
+    "link": "news-posts/congratulations-to-triathlon-coach-dave-lipchen.html"
+  },
+  {
+    "id": 5,
+    "month": "May",
+    "day": 14,
+    "title": "Tyler Mislawchuk",
+    "excerpt": "Archive athlete profile highlighting Tyler Mislawchuk's path from Manitoba development to international competition.",
+    "link": "news-posts/tyler-mislawchuk.html"
+  },
+  {
+    "id": 6,
+    "month": "Apr",
+    "day": 27,
+    "title": "Lipchin Taking Over Triathlon",
+    "excerpt": "Archive summary of the leadership transition for Riding Mountain Triathlon and the event's next chapter.",
+    "link": "news-posts/lipchin-taking-over-triathlon.html"
+  },
+  {
+    "id": 7,
+    "month": "May",
+    "day": 2,
+    "title": "Registration Is Now Open for 2018",
+    "excerpt": "Archive registration announcement preserved as part of the legacy news history.",
+    "link": "news-posts/registration-is-now-open-for-2018.html"
+  },
+  {
+    "id": 8,
+    "month": "Apr",
+    "day": 18,
+    "title": "New Website",
+    "excerpt": "Archive launch note welcoming athletes and supporters to Windburn's website presence.",
+    "link": "news-posts/new-website.html"
+  },
+  {
+    "id": 9,
+    "month": "Apr",
+    "day": 17,
+    "title": "Follow Us on Social Media",
+    "excerpt": "Archive reminder to connect with Windburn on social channels for event and team updates.",
+    "link": "news-posts/follow-us-on-social-media.html"
   }
 ]

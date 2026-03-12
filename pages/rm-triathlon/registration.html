@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Registration details for Riding Mountain Triathlon, including distance options, athlete requirements, and important registration policies." />
+  <meta property="og:title" content="Registration - RM Triathlon" />
+  <meta property="og:description" content="Review RM Triathlon registration details, athlete requirements, and the main registration call to action." />
+  <meta property="og:type" content="website" />
+  <title>Registration - RM Triathlon</title>
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/index-header.css" />
+  <link rel="stylesheet" href="../../assets/css/footer.css" />
+  <link rel="stylesheet" href="../../assets/css/content-pages.css" />
+  <link rel="icon" href="../../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="../rm-triathlon.html">RM Triathlon</a>
+        <span>/</span>
+        <span>Registration</span>
+      </div>
+      <span class="page-hero__eyebrow">Race Entry</span>
+      <h1>Registration</h1>
+      <p class="page-hero__subtitle">This page recreates the practical registration details from the legacy site while pointing athletes to your newer registration experience for the final sign-up flow.</p>
+    </div>
+  </section>
+
+  <main class="content-shell content-stack">
+    <section class="split-layout">
+      <div class="content-rich">
+        <h2>Race Entry Overview</h2>
+        <p>Riding Mountain Triathlon is designed for a broad range of athletes, from first-time multi-sport competitors through experienced triathletes racing longer and faster formats. The legacy site emphasized event access, athlete value, and clear registration rules. This page keeps the same purpose in a more concise format.</p>
+        <p>For the polished registration layout already built into your new site, use the primary call to action below.</p>
+        <div class="cta-row">
+          <a href="../sub-pages/register.html">Open Full Registration Page</a>
+          <a href="https://ccnbikes.com/#!/events/riding-mountain-triathlon-2025" target="_blank" rel="noopener">External Registration Link</a>
+        </div>
+      </div>
+      <aside class="callout">
+        <h3>Typical Distance Options</h3>
+        <ul>
+          <li>Super Sprint</li>
+          <li>Sprint Triathlon</li>
+          <li>Olympic Triathlon</li>
+          <li>Duathlon and aquabike options when offered</li>
+          <li>Relay entries where available</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="info-grid">
+      <article class="info-card">
+        <h3>Athlete Requirements</h3>
+        <p>As reflected on the live site, athletes should expect to meet Triathlon Manitoba sanctioning requirements, including age eligibility and any required association membership or one-day race license.</p>
+      </article>
+      <article class="info-card">
+        <h3>What Registration Usually Includes</h3>
+        <p>Race kit items, event support, post-race food, partner swag when available, and access to the full weekend event experience.</p>
+      </article>
+      <article class="info-card">
+        <h3>Registration Windows</h3>
+        <p>Pricing typically increases over time. Early entry usually offers the best value and the widest range of available categories.</p>
+      </article>
+    </section>
+
+    <section class="callout">
+      <h2>Important Policies</h2>
+      <ul>
+        <li>Race categories and pricing are subject to change each season.</li>
+        <li>Distance changes are usually only possible before a defined deadline and only if capacity allows.</li>
+        <li>Online registration is the main entry channel.</li>
+        <li>Weather, park conditions, and safety concerns can affect the event format or schedule.</li>
+        <li>Always review the current athlete guide before race weekend.</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../../assets/js/global.js"></script>
+  <script src="../../assets/js/header.js"></script>
+  <script>
+    fetch("../../components/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+        setActiveNavLink("rm-triathlon");
+      });
+
+    fetch("../../components/footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

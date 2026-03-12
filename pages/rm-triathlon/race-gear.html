@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official Riding Mountain Triathlon race gear information with links to external merchandise and size resources." />
+  <meta property="og:title" content="Race Gear - RM Triathlon" />
+  <meta property="og:description" content="Order official Riding Mountain Triathlon event gear and view external store resources." />
+  <meta property="og:type" content="website" />
+  <title>Race Gear - RM Triathlon</title>
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/index-header.css" />
+  <link rel="stylesheet" href="../../assets/css/footer.css" />
+  <link rel="stylesheet" href="../../assets/css/content-pages.css" />
+  <link rel="icon" href="../../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__content">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="../rm-triathlon.html">RM Triathlon</a>
+        <span>/</span>
+        <span>Race Gear</span>
+      </div>
+      <span class="page-hero__eyebrow">Merchandise</span>
+      <h1>Race Gear</h1>
+      <p class="page-hero__subtitle">The original site promoted official event apparel and swag. This version keeps that function, but presents it as a simple merchandise hub with clearer calls to action.</p>
+    </div>
+  </section>
+
+  <main class="content-shell content-stack">
+    <section class="split-layout">
+      <div class="content-rich">
+        <h2>Official Riding Mountain Triathlon Gear</h2>
+        <p>Seasonal event merchandise is typically released through an external store so athletes and supporters can order directly and have gear shipped to them. Jerseys, training tops, and other branded pieces help carry the event identity beyond race day.</p>
+        <div class="cta-row">
+          <a href="https://worldtriathlonstore.ca/collections/riding-mountain-triathlon" target="_blank" rel="noopener">Shop Official Gear</a>
+          <a href="https://www.windburnraceteam.com/images/rm-tri/CS_SIZECHART_2016_in_adult.png" target="_blank" rel="noopener">Open Size Chart</a>
+        </div>
+      </div>
+      <aside class="callout">
+        <h3>Popular Items</h3>
+        <ul>
+          <li>Cycling jersey</li>
+          <li>Event swag and race-branded apparel</li>
+          <li>Training layers</li>
+          <li>Gift items for supporters</li>
+        </ul>
+      </aside>
+    </section>
+
+    <section class="media-grid">
+      <article class="media-card">
+        <img src="../../assets/images/features/feature2.jpg" alt="Cycling jersey and bike kit inspiration" />
+        <div class="media-card__body">
+          <h3>Cycling Kits</h3>
+          <p>Official jerseys and matching apparel built for training blocks, event weekends, and team representation.</p>
+        </div>
+      </article>
+      <article class="media-card">
+        <img src="../../assets/images/features/feature4.jpg" alt="Event merchandise and branded apparel" />
+        <div class="media-card__body">
+          <h3>Event Swag</h3>
+          <p>Branded merchandise tied to the latest edition of Riding Mountain Triathlon.</p>
+        </div>
+      </article>
+      <article class="media-card">
+        <img src="../../assets/images/features/feature5.jpg" alt="Supporter and race weekend apparel" />
+        <div class="media-card__body">
+          <h3>Supporter Gear</h3>
+          <p>Great for family, volunteers, and returning athletes who want to represent the event year-round.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../../assets/js/global.js"></script>
+  <script src="../../assets/js/header.js"></script>
+  <script>
+    fetch("../../components/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+        setActiveNavLink("rm-triathlon");
+      });
+
+    fetch("../../components/footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

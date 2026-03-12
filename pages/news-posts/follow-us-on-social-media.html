@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Windburn announcement encouraging athletes and supporters to follow the team on social channels for updates and race news." />
+  <meta property="og:title" content="Follow Us on Social Media - Windburn News" />
+  <meta property="og:description" content="Stay connected with Windburn through social media for updates, race content, and team news." />
+  <meta property="og:type" content="article" />
+  <title>Follow Us on Social Media - Windburn News</title>
+  <link rel="stylesheet" href="../../assets/css/global.css" />
+  <link rel="stylesheet" href="../../assets/css/header.css" />
+  <link rel="stylesheet" href="../../assets/css/footer.css" />
+  <link rel="stylesheet" href="../../assets/css/content-pages.css" />
+  <link rel="icon" href="../../assets/images/logos/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <section class="page-hero">
+    <div class="page-hero__content content-shell--narrow">
+      <div class="breadcrumbs">
+        <a href="/">Home</a>
+        <span>/</span>
+        <a href="../news.html">News</a>
+        <span>/</span>
+        <span>Follow Us on Social Media</span>
+      </div>
+      <span class="page-hero__eyebrow">News Archive</span>
+      <h1>Follow Us on Social Media</h1>
+      <p class="page-hero__subtitle">A refreshed version of a short legacy announcement encouraging the community to follow Windburn online.</p>
+    </div>
+  </section>
+
+  <main class="content-shell content-shell--narrow content-stack">
+    <section class="article-body">
+      <div class="article-meta">
+        <span>August 16, 2025</span>
+        <span>Category: News</span>
+      </div>
+      <p>Windburn continues to use social channels to share training updates, race highlights, event reminders, and community moments. If you want the quickest way to stay current between website updates, social media is still the best place to start.</p>
+      <p>Follow the team on Instagram and Facebook for race-weekend coverage, athlete milestones, seasonal announcements, and short-form content from training sessions throughout the year.</p>
+      <div class="cta-row">
+        <a href="https://www.instagram.com/team_windburn/?hl=en" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/RaceWindburn/" target="_blank" rel="noopener">Facebook</a>
+      </div>
+      <div class="article-nav">
+        <a href="../news.html">Back to News</a>
+        <a href="new-website.html">Next Article</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../../assets/js/global.js"></script>
+  <script src="../../assets/js/header.js"></script>
+  <script>
+    fetch("../../components/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+        initStickyHeader();
+        initPhoneMenu();
+        setActiveNavLink("news");
+      });
+
+    fetch("../../components/footer.html")
+      .then((res) => res.text())
+      .then((data) => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
